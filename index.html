@@ -2730,7 +2730,7 @@
   </footer>
 
   <script>
-    // Beep Sound Function
+    // Beep Sound Function - Click
     function playBeep() {
       const audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
@@ -2747,6 +2747,25 @@
       
       oscillator.start(audioContext.currentTime);
       oscillator.stop(audioContext.currentTime + 0.1);
+    }
+
+    // Hover Sound Function - subtler, höher
+    function playHoverSound() {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.value = 1200;
+      oscillator.type = 'sine';
+      
+      gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.05);
     }
 
     function toggleAccordion(header) {
@@ -2783,6 +2802,9 @@
     var stacks = document.querySelectorAll('.stack-card');
     stacks.forEach(function(card, idx) {
       card.style.zIndex = 20 - idx;
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
       card.addEventListener('click', function() {
         playBeep();
         stacks.forEach(function(c, i) {
@@ -2816,6 +2838,22 @@
         themeIcon.className = 'fas fa-sun';
         localStorage.setItem('theme', 'dark');
       }
+    });
+
+    // Accordion hover sound
+    var accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(function(header) {
+      header.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
+    // Button hover sound
+    var buttons = document.querySelectorAll('button, a.button, .download-button');
+    buttons.forEach(function(btn) {
+      btn.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
     });
 
     // Mobile Fix - Leeren Platz entfernen
