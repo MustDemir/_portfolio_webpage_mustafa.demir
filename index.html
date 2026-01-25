@@ -354,6 +354,73 @@
         0 0 0 1px rgba(59, 130, 246, 0.2) inset;
     }
 
+    /* Progress Bar für Zertifizierungen */
+    .cert-progress {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cert-progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .cert-progress-percent {
+      font-weight: 600;
+      color: var(--accent-blue);
+    }
+
+    .cert-progress-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cert-progress-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-teal) 100%);
+      position: relative;
+      transition: width 1s ease-out;
+      animation: progressPulse 2s ease-in-out infinite;
+    }
+
+    .cert-progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: progressShine 2s ease-in-out infinite;
+    }
+
+    @keyframes progressPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+
+    @keyframes progressShine {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    body.light-mode .cert-progress-label {
+      color: #64748b;
+    }
+
+    body.light-mode .cert-progress-bar {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
     .download-card {
       background: var(--bg-secondary);
       border-radius: 16px;
@@ -2524,6 +2591,15 @@
               <span class="cert-issuer"><i class="fas fa-building"></i> Microsoft</span>
               <span class="cert-date">Mai 2026</span>
             </div>
+            <div class="cert-progress">
+              <div class="cert-progress-label">
+                <span><i class="fas fa-chart-line"></i> Lernfortschritt</span>
+                <span class="cert-progress-percent">20%</span>
+              </div>
+              <div class="cert-progress-bar">
+                <div class="cert-progress-fill" style="width: 20%;"></div>
+              </div>
+            </div>
           </div>
           
           <div class="cert-card">
@@ -2533,6 +2609,15 @@
             <div class="cert-meta">
               <span class="cert-issuer"><i class="fas fa-building"></i> Velptec</span>
               <span class="cert-date">März 2026</span>
+            </div>
+            <div class="cert-progress">
+              <div class="cert-progress-label">
+                <span><i class="fas fa-chart-line"></i> Lernfortschritt</span>
+                <span class="cert-progress-percent">50%</span>
+              </div>
+              <div class="cert-progress-bar">
+                <div class="cert-progress-fill" style="width: 50%;"></div>
+              </div>
             </div>
           </div>
           
