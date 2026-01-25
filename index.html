@@ -21,6 +21,15 @@
       --accent-teal: #14b8a6;
       --text-white: #ffffff;
       --border-color: #334155;
+      /* Extended color palette */
+      --color-cloud: #3b82f6;
+      --color-cloud-light: #0ea5e9;
+      --color-re: #22c55e;
+      --color-re-light: #10b981;
+      --color-auto: #f97316;
+      --color-auto-light: #fb923c;
+      --color-ba: #a855f7;
+      --color-ba-light: #8b5cf6;
     }
     
     html {
@@ -232,15 +241,31 @@
     .hero-service-icon {
       width: 45px;
       height: 45px;
-      background: rgba(59, 130, 246, 0.15);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 0.75rem;
       font-size: 1.25rem;
-      color: var(--accent-blue);
     }
+
+    .hero-service-card.cloud-card .hero-service-icon {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--color-cloud);
+    }
+    .hero-service-card.cloud-card:hover { border-color: var(--color-cloud); }
+
+    .hero-service-card.auto-card .hero-service-icon {
+      background: rgba(249, 115, 22, 0.15);
+      color: var(--color-auto);
+    }
+    .hero-service-card.auto-card:hover { border-color: var(--color-auto); }
+
+    .hero-service-card.ba-card .hero-service-icon {
+      background: rgba(168, 85, 247, 0.15);
+      color: var(--color-ba);
+    }
+    .hero-service-card.ba-card:hover { border-color: var(--color-ba); }
     
     .hero-service-card h4 {
       font-size: 0.9rem;
@@ -753,6 +778,19 @@
     .accordion-item:hover {
       border-color: var(--accent-blue);
     }
+
+    /* Achievement color variants */
+    .accordion-item.achieve-battery:hover { border-color: var(--color-auto); }
+    .accordion-item.achieve-battery .accordion-header h3 i { color: var(--color-auto); }
+
+    .accordion-item.achieve-ml:hover { border-color: var(--color-ba); }
+    .accordion-item.achieve-ml .accordion-header h3 i { color: var(--color-ba); }
+
+    .accordion-item.achieve-analytics:hover { border-color: var(--color-cloud); }
+    .accordion-item.achieve-analytics .accordion-header h3 i { color: var(--color-cloud); }
+
+    .accordion-item.achieve-cert:hover { border-color: var(--color-re); }
+    .accordion-item.achieve-cert .accordion-header h3 i { color: var(--color-re); }
     
     .accordion-header {
       padding: 1.5rem 2rem;
@@ -860,7 +898,7 @@
     }
     
     .skill-category:hover {
-      border-color: var(--accent-blue);
+      transform: translateY(-5px);
     }
     
     .skill-category h3 {
@@ -874,8 +912,27 @@
     }
     
     .skill-category h3 i {
-      color: var(--accent-blue);
+      font-size: 1.1rem;
     }
+
+    /* Skill category color variants */
+    .skill-category.skill-cloud:hover { border-color: var(--color-cloud); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12); }
+    .skill-category.skill-cloud h3 i { color: var(--color-cloud); }
+
+    .skill-category.skill-code:hover { border-color: var(--color-ba); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.12); }
+    .skill-category.skill-code h3 i { color: var(--color-ba); }
+
+    .skill-category.skill-auto:hover { border-color: var(--color-auto); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.12); }
+    .skill-category.skill-auto h3 i { color: var(--color-auto); }
+
+    .skill-category.skill-pm:hover { border-color: var(--color-re); box-shadow: 0 10px 30px rgba(34, 197, 94, 0.12); }
+    .skill-category.skill-pm h3 i { color: var(--color-re); }
+
+    .skill-category.skill-ml:hover { border-color: var(--color-cloud-light); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.12); }
+    .skill-category.skill-ml h3 i { color: var(--color-cloud-light); }
+
+    .skill-category.skill-lang:hover { border-color: var(--accent-teal); box-shadow: 0 10px 30px rgba(20, 184, 166, 0.12); }
+    .skill-category.skill-lang h3 i { color: var(--accent-teal); }
     
     .skill-tags {
       display: flex;
@@ -1054,21 +1111,33 @@
 
     .download-card:hover {
       transform: translateY(-8px);
-      border-color: var(--accent-blue);
-      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
     }
 
     .download-icon {
       width: 60px;
       height: 60px;
-      background: rgba(59, 130, 246, 0.15);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.6rem;
-      color: var(--accent-blue);
     }
+
+    /* Download card color variants */
+    .download-card.dl-zeugnis:hover { border-color: var(--color-re); box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15); }
+    .download-card.dl-zeugnis .download-icon { background: rgba(34, 197, 94, 0.15); color: var(--color-re); }
+
+    .download-card.dl-cert:hover { border-color: var(--color-ba); box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15); }
+    .download-card.dl-cert .download-icon { background: rgba(168, 85, 247, 0.15); color: var(--color-ba); }
+
+    .download-card.dl-cv:hover { border-color: var(--color-cloud); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15); }
+    .download-card.dl-cv .download-icon { background: rgba(59, 130, 246, 0.15); color: var(--color-cloud); }
+
+    .download-card.dl-edu:hover { border-color: var(--accent-teal); box-shadow: 0 20px 40px rgba(20, 184, 166, 0.15); }
+    .download-card.dl-edu .download-icon { background: rgba(20, 184, 166, 0.15); color: var(--accent-teal); }
+
+    .download-card.dl-project:hover { border-color: var(--color-auto); box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15); }
+    .download-card.dl-project .download-icon { background: rgba(249, 115, 22, 0.15); color: var(--color-auto); }
 
     .download-card h3 {
       font-size: 1.1rem;
@@ -1243,19 +1312,19 @@
     </a>
   </div>
         
-        <!-- Mini Service Cards - ALL SAME STYLE -->
+        <!-- Mini Service Cards - COLOR CODED -->
         <div class="hero-services">
-          <div class="hero-service-card">
+          <div class="hero-service-card cloud-card">
             <div class="hero-service-icon"><i class="fas fa-cloud"></i></div>
             <h4>Cloud Architecture</h4>
             <p>Azure & DevOps</p>
           </div>
-          <div class="hero-service-card">
+          <div class="hero-service-card auto-card">
             <div class="hero-service-icon"><i class="fas fa-car"></i></div>
             <h4>Automotive</h4>
             <p>E-Mobilität & HV</p>
           </div>
-          <div class="hero-service-card">
+          <div class="hero-service-card ba-card">
             <div class="hero-service-icon"><i class="fas fa-clipboard-list"></i></div>
             <h4>Business Analyst</h4>
             <p>IREB-Zertifizierung</p>
@@ -1498,7 +1567,7 @@
       </div>
       
       <div class="achievements-grid">
-        <div class="accordion-item">
+        <div class="accordion-item achieve-battery">
           <div class="accordion-header" onclick="toggleAccordion(this)">
             <h3><i class="fas fa-battery-full"></i> Hochvoltbatterie-Entwicklung</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
@@ -1515,7 +1584,7 @@
           </div>
         </div>
         
-        <div class="accordion-item">
+        <div class="accordion-item achieve-ml">
           <div class="accordion-header" onclick="toggleAccordion(this)">
             <h3><i class="fas fa-brain"></i> Deep Learning Projekt</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
@@ -1532,7 +1601,7 @@
           </div>
         </div>
         
-        <div class="accordion-item">
+        <div class="accordion-item achieve-analytics">
           <div class="accordion-header" onclick="toggleAccordion(this)">
             <h3><i class="fas fa-heartbeat"></i> Predictive Analytics & MLOps</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
@@ -1549,7 +1618,7 @@
           </div>
         </div>
         
-        <div class="accordion-item">
+        <div class="accordion-item achieve-cert">
           <div class="accordion-header" onclick="toggleAccordion(this)">
             <h3><i class="fas fa-certificate"></i> Zertifizierungen</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
@@ -1579,7 +1648,7 @@
       </div>
       
       <div class="skills-grid">
-        <div class="skill-category">
+        <div class="skill-category skill-cloud">
           <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
           <div class="skill-tags">
             <span class="skill-tag">Microsoft Azure</span>
@@ -1591,7 +1660,7 @@
           </div>
         </div>
         
-        <div class="skill-category">
+        <div class="skill-category skill-code">
           <h3><i class="fas fa-code"></i> Programmierung</h3>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
@@ -1603,7 +1672,7 @@
           </div>
         </div>
         
-        <div class="skill-category">
+        <div class="skill-category skill-auto">
           <h3><i class="fas fa-car"></i> Automotive</h3>
           <div class="skill-tags">
             <span class="skill-tag">MS-Operation Systems</span>
@@ -1614,7 +1683,7 @@
           </div>
         </div>
         
-        <div class="skill-category">
+        <div class="skill-category skill-pm">
           <h3><i class="fas fa-tasks"></i> Projektmanagement</h3>
           <div class="skill-tags">
             <span class="skill-tag">Scrum</span>
@@ -1626,7 +1695,7 @@
           </div>
         </div>
         
-        <div class="skill-category">
+        <div class="skill-category skill-ml">
           <h3><i class="fas fa-brain"></i> Data & ML</h3>
           <div class="skill-tags">
             <span class="skill-tag">Machine Learning</span>
@@ -1638,7 +1707,7 @@
           </div>
         </div>
         
-        <div class="skill-category">
+        <div class="skill-category skill-lang">
           <h3><i class="fas fa-language"></i> Sprachen</h3>
           <div class="skill-tags">
             <span class="skill-tag">Deutsch (Muttersprache)</span>
@@ -1725,7 +1794,7 @@
       </div>
 
       <div class="downloads-grid">
-        <div class="download-card">
+        <div class="download-card dl-zeugnis">
           <div class="download-icon"><i class="fas fa-file-signature"></i></div>
           <div>
             <h3>Arbeitszeugnisse</h3>
@@ -1740,7 +1809,7 @@
           </a>
         </div>
 
-        <div class="download-card">
+        <div class="download-card dl-cert">
           <div class="download-icon"><i class="fas fa-certificate"></i></div>
           <div>
             <h3>Zertifikate</h3>
@@ -1755,7 +1824,7 @@
           </a>
         </div>
 
-        <div class="download-card">
+        <div class="download-card dl-cv">
           <div class="download-icon"><i class="fas fa-user"></i></div>
           <div>
             <h3>Lebenslauf (CV)</h3>
@@ -1770,7 +1839,7 @@
           </a>
         </div>
 
-        <div class="download-card">
+        <div class="download-card dl-edu">
           <div class="download-icon"><i class="fas fa-graduation-cap"></i></div>
           <div>
             <h3>Leistungsnachweis</h3>
@@ -1785,7 +1854,7 @@
           </a>
         </div>
 
-        <div class="download-card">
+        <div class="download-card dl-project">
           <div class="download-icon"><i class="fas fa-folder-open"></i></div>
           <div>
             <h3>Projekte</h3>
