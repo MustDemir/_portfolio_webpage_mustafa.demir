@@ -2610,15 +2610,16 @@
       }
     });
 
-    // Mobile Fix - Remove empty space
+    // Mobile Fix - Leeren Platz entfernen
     const mobileStyle = document.createElement('style');
     mobileStyle.textContent = `
-    @media (max-width: 768px) {
-      * { margin-bottom: 1rem !important; }
-      .hero-section, .hero { min-height: 40vh !important; padding: 1rem !important; }
-      .expertise-grid, .cards-grid { gap: 1rem !important; margin: 1rem 0 !important; }
-      body { padding: 0.5rem !important; }
-    }`;
+      @media (max-width: 768px) {
+        * { margin-bottom: 1rem !important; }
+        .hero-section, .hero { min-height: 40vh !important; padding: 1rem !important; }
+        .expertise-grid, .cards-grid { gap: 1rem !important; margin: 1rem 0 !important; }
+        body { padding: 0.5rem !important; }
+      }
+    `;
     document.head.appendChild(mobileStyle);
   </script>
 </body>
