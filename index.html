@@ -2848,6 +2848,14 @@
       });
     });
 
+    // Certification cards hover sound
+    var certCards = document.querySelectorAll('.cert-card');
+    certCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
     // Button hover sound
     var buttons = document.querySelectorAll('button, a.button, .download-button');
     buttons.forEach(function(btn) {
