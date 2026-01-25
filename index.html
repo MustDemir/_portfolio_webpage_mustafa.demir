@@ -2856,6 +2856,53 @@
       });
     });
 
+    // Hero page buttons hover sound
+    var heroButtons = document.querySelectorAll('.hero-buttons a, .hero-buttons button');
+    heroButtons.forEach(function(btn) {
+      btn.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
+    // Timeline entries hover sound
+    var timelineEntries = document.querySelectorAll('.timeline-entry');
+    timelineEntries.forEach(function(entry) {
+      entry.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
+    // Skill tags hover sound
+    var skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(function(tag) {
+      tag.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
+    // Download cards hover sound
+    var downloadCards = document.querySelectorAll('.download-card');
+    downloadCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
+    // Contact cards & social links hover sound
+    var contactCards = document.querySelectorAll('.contact-card');
+    contactCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
+    var socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(function(link) {
+      link.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
     // Button hover sound
     var buttons = document.querySelectorAll('button, a.button, .download-button');
     buttons.forEach(function(btn) {
