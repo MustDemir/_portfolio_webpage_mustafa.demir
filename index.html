@@ -2848,6 +2848,14 @@
       });
     });
 
+    // Navigation links hover sound
+    var navLinks = document.querySelectorAll('.nav-links a, .nav-contact, .logo');
+    navLinks.forEach(function(link) {
+      link.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
+    });
+
     // Certification cards hover sound
     var certCards = document.querySelectorAll('.cert-card');
     certCards.forEach(function(card) {
