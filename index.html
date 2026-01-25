@@ -480,130 +480,176 @@
       line-height: 1.6;
     }
     
-    /* Experience Section with Timeline */
+    /* Experience Section with Modern Timeline */
     .experience {
       padding: 6rem 4rem;
       background: var(--bg-secondary);
     }
     
     .experience-container {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 4rem;
       position: relative;
-      min-height: 800px;
     }
-    
-    .experience-content {
-      padding-right: 2rem;
-    }
-    
-    /* Timeline */
-    .timeline-wrapper {
-      background: linear-gradient(180deg, #1e3a5f 0%, #0f172a 100%);
-      border-radius: 20px;
-      padding: 2rem;
-      border: 1px solid var(--border-color);
-      max-height: 650px;
-      overflow-y: auto;
-      position: sticky;
-      top: 120px;
-      align-self: flex-start;
-    }
-    
-    .timeline-wrapper::-webkit-scrollbar {
-      width: 6px;
-    }
-    
-    .timeline-wrapper::-webkit-scrollbar-track {
-      background: var(--bg-primary);
-      border-radius: 3px;
-    }
-    
-    .timeline-wrapper::-webkit-scrollbar-thumb {
-      background: var(--accent-blue);
-      border-radius: 3px;
-    }
-    
-    .timeline-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      color: var(--text-white);
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-    
-    .timeline {
+
+    .timeline-modern {
       position: relative;
-      padding-left: 35px;
+      padding: 2rem 1rem;
     }
-    
-    .timeline::before {
+
+    .timeline-modern::before {
       content: '';
       position: absolute;
-      left: 10px;
       top: 0;
       bottom: 0;
+      left: 50%;
       width: 3px;
       background: linear-gradient(180deg, var(--accent-blue), var(--accent-teal));
-      border-radius: 3px;
+      transform: translateX(-50%);
+      opacity: 0.6;
     }
-    
-    .timeline-item {
+
+    .timeline-entry {
       position: relative;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      width: calc(50% - 2rem);
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.35);
+      transition: all 0.3s ease;
     }
-    
-    .timeline-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+
+    .timeline-entry:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-blue);
+      box-shadow: 0 18px 40px rgba(59, 130, 246, 0.18);
     }
-    
-    .timeline-item::before {
+
+    .timeline-entry::before {
       content: '';
       position: absolute;
-      left: -31px;
-      top: 5px;
-      width: 16px;
-      height: 16px;
+      top: 24px;
+      width: 14px;
+      height: 14px;
       background: var(--accent-blue);
-      border-radius: 50%;
       border: 3px solid var(--bg-secondary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
     }
-    
+
+    .timeline-entry.left {
+      margin-left: 0;
+      margin-right: auto;
+      padding-right: 2.25rem;
+    }
+
+    .timeline-entry.left::before {
+      right: -36px;
+    }
+
+    .timeline-entry.right {
+      margin-left: auto;
+      margin-right: 0;
+      padding-left: 2.25rem;
+    }
+
+    .timeline-entry.right::before {
+      left: -36px;
+    }
+
     .timeline-date {
-      font-size: 0.85rem;
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      background: rgba(59, 130, 246, 0.12);
+      color: #cbd5ff;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      margin-bottom: 0.85rem;
+    }
+
+    .timeline-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .timeline-company {
+      font-size: 0.95rem;
       color: var(--accent-teal);
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.7rem;
     }
-    
-    .timeline-item h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-white);
-      margin-bottom: 0.25rem;
-    }
-    
-    .timeline-item h5 {
+
+    .timeline-desc {
+      color: rgba(255,255,255,0.75);
       font-size: 0.95rem;
-      color: var(--accent-blue);
-      font-weight: 500;
-      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      margin-bottom: 0.9rem;
     }
-    
-    .timeline-item p {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.7);
+
+    .timeline-list {
+      margin: 0.5rem 0 0;
+      padding-left: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    .timeline-list li {
+      padding: 0.25rem 0;
+    }
+
+    .timeline-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .timeline-meta i {
+      color: var(--accent-blue);
+    }
+
+    .tech-text {
+      font-family: 'Inter', monospace;
+      padding: 0.1rem 0.35rem;
+      border-radius: 6px;
+      background: rgba(20, 184, 166, 0.12);
+      border: 1px solid rgba(20, 184, 166, 0.25);
+      color: #8cf7e4;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 960px) {
+      .timeline-modern::before {
+        left: 24px;
+        transform: none;
+      }
+
+      .timeline-entry {
+        width: 100%;
+        padding: 1.5rem 1.25rem 1.5rem 2.75rem;
+      }
+
+      .timeline-entry.left,
+      .timeline-entry.right {
+        margin: 0 0 2rem 0;
+      }
+
+      .timeline-entry.left::before,
+      .timeline-entry.right::before {
+        left: 6px;
+        right: auto;
+      }
     }
     
     /* Accordion */
@@ -1227,167 +1273,109 @@
       <p>Mein Werdegang in der Automotive- und IT-Branche</p>
     </div>
     <div class="experience-container">
-      <div class="experience-content">
-        
-        <div class="accordion">
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <h3><i class="fas fa-compass"></i> Karriereübergang | Upskilling Cloud Architect</h3>
-              <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                <p><strong>Okt. 2025 – Heute · Stuttgart</strong></p>
-                <ul>
-                  <li>Weiterbildung Cloud Architect (Start 26.01.26), Ziel: AZ-305</li>
-                  <li>Masterarbeit M.Sc. Digital Management & Transformation</li>
-                  <li>Fokus: PO/PM, Requirements Engineering, Cloud Architecture</li>
-                  <li>Methoden: IREB, Prompt Engineering, Cloud-Konzepte, MLOps</li>
-                </ul>
-              </div>
-            </div>
-          </div>           
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <h3><i class="fas fa-bolt"></i> Projektleiter E-Mobility & Agile Prozesse</h3>
-              <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                <p><strong>Mercedes-AMG GmbH · Dez. 2023 – Juli 2025</strong></p>
-                <ul>
-                  <li>Einführung von Jira & Confluence für Task- und Wissensmanagement</li>
-                  <li>Konzeption eines Jira-basierten Fehlermanagements</li>
-                  <li>Schnittstellenmanagement mit Entwicklung, Produktion, Einkauf, Aftersales</li>
-                  <li>Meilensteine, Budget und Ressourcen im Änderungsmanagement</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <h3><i class="fas fa-diagram-project"></i> Project Manager / Product Strategy MB.OS 2.0</h3>
-              <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                <p><strong>Mercedes-Benz AG · Sept. 2022 – Dez. 2023</strong></p>
-                <ul>
-                  <li>Anforderungsmanagement & Produkt-Line-ups mit Marketing/Sales</li>
-                  <li>Business Case Bewertung mit Controlling</li>
-                  <li>Gremien- & Stakeholder-Management, Management-Docs</li>
-                  <li>Maturity Management für MB.OS 2.0</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <h3><i class="fas fa-database"></i> Spezialist Data- & Prozessmanagement</h3>
-              <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                <p><strong>Magna International · März 2022 – Sept. 2022</strong></p>
-                <ul>
-                  <li>Optimierung von Daten- und Prozessabläufen im Gesamtfahrzeug</li>
-                  <li>Begleitung von Produktfreigaben & Produktionsprozessen</li>
-                  <li>Qualitätsanforderungen prüfen und absichern</li>
-                  <li>Beitrag zu Effizienzsteigerung und reibungsloser Einführung</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <h3><i class="fas fa-car"></i> Praktikum Komplexitäts- & Variantenmanagement</h3>
-              <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                <p><strong>BMW Group · Jan. 2021 – Juli 2021</strong></p>
-                <ul>
-                  <li>Einführung agiler Methoden & Tools (u. a. Jira)</li>
-                  <li>Benchmarking zu Komplexitäts- & Variantenmanagement</li>
-                  <li>Variantenbaum-Erstellung und Plausibilitätsprüfung</li>
-                  <li>Cross-funktionale Zusammenarbeit in der Produktentwicklung</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <h3><i class="fas fa-car"></i> Praktikum Digital Transformation & Produktmanagement</h3>
-              <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="accordion-body">
-                <p><strong>Mercedes-Benz AG · März 2020 – Sept. 2020</strong></p>
-                <ul>
-                  <li>Unterstützung bei digitalen Transformationsprojekten</li>
-                  <li>Business-Anforderungen dokumentieren und analysieren</li>
-                  <li>Stakeholder-Management und Requirements Engineering</li>
-                  <li>Agile Methoden und Produktmanagement-Prozesse</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="timeline-modern">
+        <div class="timeline-entry left">
+          <span class="timeline-date">Okt. 2025 – Heute</span>
+          <h3 class="timeline-role">Karriereübergang | Upskilling Cloud Architect</h3>
+          <div class="timeline-company">Stuttgart</div>
+          <p class="timeline-desc">Neuorientierung in Richtung Cloud & AI, Fokus auf Produktrolle, Architektur und moderne Delivery.</p>
+          <ul class="timeline-list">
+            <li>Weiterbildung Cloud Architect (Start 26.01.26), Ziel <span class="tech-text">AZ-305</span></li>
+            <li>Masterarbeit M.Sc. Digital Management & Transformation</li>
+            <li>Fokus: PO/PM, Requirements Engineering, Cloud Architecture</li>
+            <li>Methoden: IREB, <span class="tech-text">Prompt Engineering</span>, Cloud-Konzepte, <span class="tech-text">MLOps</span></li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-laptop-code"></i><span>Cloud | PO/PM</span></div>
         </div>
-      </div>
 
-      <!-- Timeline -->
-      <div class="timeline-wrapper">
-        <h3 class="timeline-title"><i class="fas fa-history"></i> Werdegang</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">Okt. 2025 – Heute</div>
-            <h4>Karriereübergang | Upskilling Cloud Architect</h4>
-            <h5>Stuttgart</h5>
-            <p>Neuorientierung, Masterarbeit, Zertifizierungen</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Dez. 2023 – Juli 2025</div>
-            <h4>Projektleiter E-Mobility & Agile Prozesse</h4>
-            <h5>Mercedes-AMG GmbH</h5>
-            <p>Hochvoltbatterien</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Sept. 2022 – Dez. 2023</div>
-            <h4>Project Manager / Product Strategy MB.OS 2.0</h4>
-            <h5>Mercedes-Benz AG</h5>
-            <p>Produktstrategie & E/E-Architektur</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">März 2022 – Sept. 2022</div>
-            <h4>Spezialist Data- & Prozessmanagement</h4>
-            <h5>Magna International</h5>
-            <p>Gesamtfahrzeug</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Jan. 2021 – Juli 2021</div>
-            <h4>Praktikum Komplexitäts- & Variantenmanagement</h4>
-            <h5>BMW Group</h5>
-            <p>Gesamtfahrzeug</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">März 2020 – Sept. 2020</div>
-            <h4>Berater Digitale Transformation & Produktmanagement</h4>
-            <h5>Mercedes-Benz AG</h5>
-            <p>Produktprojekte, Digitalisierung, agile Methoden</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Okt. 2023 – Apr. 2026</div>
-            <h4>M.Sc. Digital Management & Transformation</h4>
-            <h5>SRH Fernhochschule</h5>
-            <p>Masterarbeit: Federated Learning & MLOps</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2013 – 2018</div>
-            <h4>Bachelor of Applied Science</h4>
-            <h5>Universität Hohenheim</h5>
-            <p>Wirtschaftswissenschaften</p>
-          </div>
+        <div class="timeline-entry right">
+          <span class="timeline-date">Dez. 2023 – Juli 2025</span>
+          <h3 class="timeline-role">Projektleiter E-Mobility & Agile Prozesse</h3>
+          <div class="timeline-company">Mercedes-AMG GmbH</div>
+          <p class="timeline-desc">Einführung agiler Toolchains und Steuerung von E-Mobility-Programmen.</p>
+          <ul class="timeline-list">
+            <li>Jira & Confluence für Task- und Wissensmanagement eingeführt</li>
+            <li>Jira-basiertes Fehlermanagement konzipiert und gerollt</li>
+            <li>Schnittstellen zu Entwicklung, Produktion, Einkauf, Aftersales orchestriert</li>
+            <li>Meilensteine, Budget, Ressourcen im Änderungsmanagement verantwortet</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Affalterbach</span><i class="fas fa-bolt"></i><span>E-Mobility | Agile</span></div>
+        </div>
+
+        <div class="timeline-entry left">
+          <span class="timeline-date">Sept. 2022 – Dez. 2023</span>
+          <h3 class="timeline-role">Project Manager / Product Strategy MB.OS 2.0</h3>
+          <div class="timeline-company">Mercedes-Benz AG</div>
+          <p class="timeline-desc">Produktstrategie für MB.OS 2.0, Fokus auf Requirements, Business Cases und Governance.</p>
+          <ul class="timeline-list">
+            <li>Anforderungsmanagement & Produkt-Line-ups mit Marketing/Sales</li>
+            <li>Business-Case-Bewertung mit Controlling</li>
+            <li>Gremien- & Stakeholder-Management, Management-Docs</li>
+            <li>Maturity Management für MB.OS 2.0</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-diagram-project"></i><span>MB.OS | Product</span></div>
+        </div>
+
+        <div class="timeline-entry right">
+          <span class="timeline-date">März 2022 – Sept. 2022</span>
+          <h3 class="timeline-role">Spezialist Data- & Prozessmanagement</h3>
+          <div class="timeline-company">Magna International</div>
+          <p class="timeline-desc">Qualität und Effizienz im Gesamtfahrzeug durch Daten- und Prozessoptimierung.</p>
+          <ul class="timeline-list">
+            <li>Daten- und Prozessabläufe optimiert, Freigaben begleitet</li>
+            <li>Produktionsprozesse und Qualitätsanforderungen abgesichert</li>
+            <li>Beitrag zu Effizienzsteigerung und reibungsloser Einführung</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Graz</span><i class="fas fa-database"></i><span>Data | Prozesse</span></div>
+        </div>
+
+        <div class="timeline-entry left">
+          <span class="timeline-date">Jan. 2021 – Juli 2021</span>
+          <h3 class="timeline-role">Praktikum Komplexitäts- & Variantenmanagement</h3>
+          <div class="timeline-company">BMW Group</div>
+          <p class="timeline-desc">Komplexitäts- und Variantenmanagement in der Produktentwicklung.</p>
+          <ul class="timeline-list">
+            <li>Agile Methoden & Tools (u. a. Jira) eingeführt</li>
+            <li>Benchmarking zu Komplexitäts- & Variantenmanagement</li>
+            <li>Variantenbaum-Erstellung und Plausibilitätsprüfung</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>München</span><i class="fas fa-car"></i><span>Variant Mgmt</span></div>
+        </div>
+
+        <div class="timeline-entry right">
+          <span class="timeline-date">März 2020 – Sept. 2020</span>
+          <h3 class="timeline-role">Praktikum Digital Transformation & Produktmanagement</h3>
+          <div class="timeline-company">Mercedes-Benz AG</div>
+          <p class="timeline-desc">Unterstützung digitaler Transformationsprojekte mit Fokus auf Requirements & Stakeholder.</p>
+          <ul class="timeline-list">
+            <li>Business-Anforderungen dokumentiert und analysiert</li>
+            <li>Stakeholder-Management und Requirements Engineering</li>
+            <li>Agile Methoden und Produktmanagement-Prozesse unterstützt</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-sync"></i><span>Digital | Agile</span></div>
+        </div>
+
+        <div class="timeline-entry left">
+          <span class="timeline-date">Okt. 2023 – Apr. 2026</span>
+          <h3 class="timeline-role">M.Sc. Digital Management & Transformation</h3>
+          <div class="timeline-company">SRH Fernhochschule</div>
+          <p class="timeline-desc">Masterstudium mit Schwerpunkt Data, Cloud und transformative Technologien.</p>
+          <ul class="timeline-list">
+            <li>Masterarbeit: Federated Learning & <span class="tech-text">MLOps</span></li>
+            <li>Vertiefung Cloud-Architekturen, Data & AI</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Remote</span><i class="fas fa-graduation-cap"></i><span>Master</span></div>
+        </div>
+
+        <div class="timeline-entry right">
+          <span class="timeline-date">2013 – 2018</span>
+          <h3 class="timeline-role">Bachelor of Applied Science</h3>
+          <div class="timeline-company">Universität Hohenheim</div>
+          <p class="timeline-desc">Schwerpunkt Wirtschaftswissenschaften, analytische Methoden und Management.</p>
+          <ul class="timeline-list">
+            <li>Fokus auf Wirtschaft, Datenanalyse und Prozessdenken</li>
+          </ul>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-university"></i><span>B.Sc.</span></div>
         </div>
       </div>
     </div>
