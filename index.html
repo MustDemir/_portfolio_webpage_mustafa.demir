@@ -1641,11 +1641,23 @@
     .accordion-item.achieve-ml:hover { border-color: var(--color-ba); }
     .accordion-item.achieve-ml .accordion-header h3 i { color: var(--color-ba); }
 
+    .accordion-item.achieve-strategy:hover { border-color: var(--color-re); }
+    .accordion-item.achieve-strategy .accordion-header h3 i { color: var(--color-re); }
+
     .accordion-item.achieve-analytics:hover { border-color: var(--color-cloud); }
     .accordion-item.achieve-analytics .accordion-header h3 i { color: var(--color-cloud); }
 
-    .accordion-item.achieve-cert:hover { border-color: var(--color-re); }
-    .accordion-item.achieve-cert .accordion-header h3 i { color: var(--color-re); }
+    .accordion-item.achieve-ki:hover { border-color: var(--color-cloud-light); }
+    .accordion-item.achieve-ki .accordion-header h3 i { color: var(--color-cloud-light); }
+
+    .accordion-item.achieve-safe:hover { border-color: var(--color-ba-light); }
+    .accordion-item.achieve-safe .accordion-header h3 i { color: var(--color-ba-light); }
+
+    .accordion-item.achieve-esg:hover { border-color: var(--color-re-light); }
+    .accordion-item.achieve-esg .accordion-header h3 i { color: var(--color-re-light); }
+
+    .accordion-item.achieve-dev:hover { border-color: var(--color-auto); }
+    .accordion-item.achieve-dev .accordion-header h3 i { color: var(--color-auto); }
     
     .accordion-header {
       padding: 1.5rem 2rem;
@@ -1726,9 +1738,9 @@
     
     .achievements-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 1000px;
+      max-width: 1400px;
       margin: 0 auto;
     }
     
@@ -2536,6 +2548,23 @@
           </div>
         </div>
         
+        <div class="accordion-item achieve-strategy">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3><i class="fas fa-chart-line"></i> Product Strategy MB.OS 2.0</h3>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul>
+                <li>Klare Anforderungsbasis durch Abstimmung mit Vertrieb & Marketing</li>
+                <li>Fundierte Business Case Analysen für transparente Entscheidungen</li>
+                <li>Professionelle Gremienarbeit & Entscheidungsfindung</li>
+                <li>Verbesserte Planbarkeit im Produktreifegradprozess</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
         <div class="accordion-item achieve-analytics">
           <div class="accordion-header" onclick="toggleAccordion(this)">
             <h3><i class="fas fa-heartbeat"></i> Predictive Analytics & MLOps</h3>
@@ -2553,19 +2582,71 @@
           </div>
         </div>
         
-        <div class="accordion-item achieve-cert">
+        <div class="accordion-item achieve-ki">
           <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-certificate"></i> Zertifizierungen</h3>
+            <h3><i class="fas fa-robot"></i> KI-gestütztes Anforderungsmanagement</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
               <ul>
-                <li>Microsoft Azure AZ-305 (in Arbeit)</li>
-                <li>Cloud Architect Velptec (AVAZ Zertifizierung - in Arbeit)</li>
-                <li>IREB Agiles Requirements Engineering</li>
-                <li>Scrum Master / Product Owner (AVAZ Zertifizierung)</li>
-                <li>KI Berater</li>
+                <li>Konzeption einer KI-Lösung zur Automatisierung des Anforderungsmanagements</li>
+                <li>Einsatz von BERT-Modellen für Klassifizierung & Duplikaterkennung (F1-Score: 0,90)</li>
+                <li>Entwurf einer Cloud-nativen Architektur mit Human-in-the-Loop-Workflow</li>
+                <li>Prognose: 70% Zeitersparnis und 40% weniger Fehler</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item achieve-safe">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3><i class="fas fa-project-diagram"></i> KI-Integration im SAFe Framework</h3>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul>
+                <li>Theoriegeleitete Fallstudie zu 4 SAFe-Rollen & 6 agilen Teams</li>
+                <li>10+ KI-Use-Cases für Automotive E/E-Entwicklung identifiziert</li>
+                <li>Analyse des Rollenwandels durch KI-Automatisierung</li>
+                <li>Handlungsempfehlungen für strategische Transformation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item achieve-esg">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3><i class="fas fa-leaf"></i> ESG-Score App (PoS)</h3>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul>
+                <li>App für Barcode-Scan & ESG-Echtzeit-Scoring am Point of Sale konzipiert</li>
+                <li>Customer Journey Mapping & Value Proposition Design zu Epics/User Stories/MVP</li>
+                <li>Feature-Priorisierung via Conjoint-Logik & Trade-off-Definition</li>
+                <li>Pilotsetup (3 Filialen/6 Monate) mit KPIs & Skalierungsplan</li>
+                <li>DSGVO/Privacy-by-Design & Greenwashing-Prevention</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item achieve-dev">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3><i class="fas fa-laptop-code"></i> KI-gestützte Web-Entwicklung</h3>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul>
+                <li>Portfolio-Website (über 3500 Zeilen) durch KI-Kollaboration entwickelt</li>
+                <li>Praktische IT-Skills: Prompt Engineering, HTML5, CSS3, JavaScript & KI-Tools (GitHub Copilot, VS Code, Claude, Monica AI)</li>
+                <li>Effizienzsteigerung Faktor 10: 60-80h → 6h konzeptionelle Arbeit</li>
+                <li>Rollenverteilung: 60% Requirements, 30% QA, 90% Coding mit Copilot</li>
+                <li>Wissenschaftlicher Artikel mit 42 Quellen publiziert</li>
               </ul>
             </div>
           </div>
@@ -2746,7 +2827,7 @@
       <div class="section-header">
         <div class="section-header-icon"><i class="fas fa-download"></i></div>
         <h2>Downloads</h2>
-        <p>Relevante Unterlagen für Arbeitgeber und Recruiter<strong>docs</strong> ablegen.</p>
+        <p>Relevante Unterlagen für Arbeitgeber und Recruiter</p>
       </div>
 
       <div class="downloads-grid">
