@@ -290,25 +290,18 @@
       border-radius: 14px;
       padding: 1.75rem 1.5rem;
       margin-bottom: 2.5rem;
-      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.35);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      transform-style: preserve-3d;
-      transform: perspective(1000px) rotateY(0deg);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(1);
+      z-index: 1;
+      transition: all 0.3s ease;
+      will-change: transform;
+      backface-visibility: hidden;
     }
 
-    .timeline-entry.left:hover {
-      transform: perspective(1000px) rotateY(8deg) translateZ(25px) translateY(-8px);
-      box-shadow: 
-        -20px 30px 60px rgba(0,0,0,0.3),
-        0 0 0 1px rgba(59, 130, 246, 0.3) inset;
-      border-color: var(--accent-blue);
-    }
-
-    .timeline-entry.right:hover {
-      transform: perspective(1000px) rotateY(-8deg) translateZ(25px) translateY(-8px);
-      box-shadow: 
-        20px 30px 60px rgba(0,0,0,0.3),
-        0 0 0 1px rgba(59, 130, 246, 0.3) inset;
+    .timeline-entry:hover {
+      transform: scale(1.05) translateY(-5px);
+      z-index: 10;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
       border-color: var(--accent-blue);
     }
 
@@ -1365,14 +1358,19 @@
       border-radius: 14px;
       padding: 1.75rem 1.5rem;
       margin-bottom: 2.5rem;
-      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.35);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(1);
+      z-index: 1;
       transition: all 0.3s ease;
+      will-change: transform;
+      backface-visibility: hidden;
     }
 
     .timeline-entry:hover {
-      transform: translateY(-6px);
+      transform: scale(1.05) translateY(-5px);
+      z-index: 10;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
       border-color: var(--accent-blue);
-      box-shadow: 0 18px 40px rgba(59, 130, 246, 0.18);
     }
 
     .timeline-entry::before {
