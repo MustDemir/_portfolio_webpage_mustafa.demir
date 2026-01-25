@@ -92,6 +92,20 @@
     }
 
     body.light-mode .hero-content h1,
+    body.light-mode .section-header {
+      border-color: #e2e8f0;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(20, 184, 166, 0.03) 100%);
+    }
+
+    body.light-mode .section-header:hover {
+      border-color: var(--accent-blue);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(20, 184, 166, 0.08) 100%);
+    }
+
+    body.light-mode .section-header-icon {
+      color: var(--accent-blue);
+    }
+
     body.light-mode .hero-description,
     body.light-mode .section-header h2,
     body.light-mode .profile-name {
@@ -880,6 +894,30 @@
     .section-header {
       text-align: center;
       margin-bottom: 3.5rem;
+      padding: 2.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(20, 184, 166, 0.05) 100%);
+      transition: all 0.3s ease;
+    }
+
+    .section-header:hover {
+      border-color: var(--accent-blue);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+    }
+
+    .section-header-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-blue);
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
 
     .section-header h2 {
@@ -2167,6 +2205,7 @@
   <section class="expertise" id="services">
     <div class="section-container">
       <div class="section-header">
+        <div class="section-header-icon"><i class="fas fa-rocket"></i></div>
         <h2>Meine Expertise</h2>
         <p>Mein IT-Kompetenzprofil verbindet Cloud-Architektur-Spezialisierung mit agiler Requirements Engineering-Erfahrung aus komplexen Technologie-Projekten – von der Automotive-IT zur Enterprise Cloud.</p>
       </div>
@@ -2259,6 +2298,7 @@
   <section class="experience" id="experience">
     <!-- Section header moved above grid to align columns -->
     <div class="section-header" style="text-align: center;">
+      <div class="section-header-icon"><i class="fas fa-briefcase"></i></div>
       <h2>Berufserfahrung</h2>
       <p>Mein Werdegang in der Automotive- und IT-Branche</p>
     </div>
@@ -2375,6 +2415,7 @@
   <section class="achievements" id="achievements">
     <div class="section-container">
       <div class="section-header">
+        <div class="section-header-icon"><i class="fas fa-trophy"></i></div>
         <h2>Erfolge & Projekte</h2>
         <p>Highlights meiner beruflichen Laufbahn</p>
       </div>
@@ -2456,6 +2497,7 @@
   <section class="skills" id="skills">
     <div class="section-container">
       <div class="section-header">
+        <div class="section-header-icon"><i class="fas fa-code"></i></div>
         <h2>Technische Skills</h2>
         <p>Meine Kernkompetenzen und Technologien</p>
       </div>
@@ -2602,6 +2644,7 @@
   <section class="downloads" id="downloads">
     <div class="section-container">
       <div class="section-header">
+        <div class="section-header-icon"><i class="fas fa-download"></i></div>
         <h2>Downloads</h2>
         <p>Relevante Unterlagen für Arbeitgeber und Recruiter<strong>docs</strong> ablegen.</p>
       </div>
@@ -2688,6 +2731,7 @@
   <section class="contact" id="contact">
     <div class="section-container">
       <div class="section-header">
+        <div class="section-header-icon"><i class="fas fa-heart"></i></div>
         <h2>Kontakt</h2>
         <p>Wer aufhört besser zu werden, hört auf, gut zu sein.</p>
       </div>
