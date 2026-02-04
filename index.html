@@ -85,6 +85,22 @@
       color: #1e293b;
     }
 
+    body.light-mode .nav-toggle {
+      background: rgba(59, 130, 246, 0.08);
+      border-color: #e2e8f0;
+      color: #1e293b;
+    }
+
+    body.light-mode .mobile-nav a {
+      background: rgba(248, 250, 252, 0.9);
+      border-color: #e2e8f0;
+      color: #1e293b;
+    }
+
+    body.light-mode .mobile-nav-cta .btn-secondary {
+      border-color: #cbd5e1;
+    }
+
     body.light-mode .hero-badge {
       color: var(--accent-blue);
       background: rgba(59, 130, 246, 0.1);
@@ -224,6 +240,21 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    .icon-only {
+      min-width: 44px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    .icon-only i {
+      margin: 0;
     }
 
     .theme-toggle:hover {
@@ -510,6 +541,63 @@
       transform: scale(1.2);
     }
 
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: rgba(59, 130, 246, 0.12);
+      color: var(--text-white);
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-toggle:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: var(--accent-blue);
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 0 1rem 1rem;
+      margin-top: 0.75rem;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+
+    body.nav-open .mobile-nav {
+      max-height: 500px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav a {
+      padding: 0.75rem 0.5rem;
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+    }
+
+    .mobile-nav-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .mobile-nav-cta .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
     .nav-contact {
       display: flex;
       align-items: center;
@@ -526,6 +614,18 @@
 
     .nav-contact:hover {
       background: #2563eb;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
     
     /* Hero Section */
@@ -709,6 +809,9 @@
     
     .hero-image-bg {
       display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .hero-profile-overlay {
@@ -1125,6 +1228,14 @@
 
       .desktop-nav {
         display: none !important;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .mobile-nav {
+        display: flex;
       }
       
       /* Typography */
@@ -2199,6 +2310,10 @@
       #lovable-badge-close:active {
         transform: none;
       }
+
+      .mobile-nav {
+        transition: none;
+      }
     }
 
     @media (prefers-contrast: high) {
@@ -2231,11 +2346,27 @@
         <li><a href="#downloads" class="nav-link">Downloads</a></li>
       </ul>
       <div class="nav-cta desktop-nav" style="display: flex; gap: 1rem; align-items: center;">
-        <a href="https://www.linkedin.com/in/mustafa-demir-331900202/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="LinkedIn" style="padding: 0.5rem 1rem; display: flex; align-items: center;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/mustafa-demir-331900202/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary icon-only" title="LinkedIn" style="padding: 0.5rem 1rem; display: flex; align-items: center;"><i class="fab fa-linkedin"></i></a>
         <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; display: flex; align-items: center;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt</a>
         <a href="#downloads" class="btn btn-primary" style="padding: 0.5rem 1.2rem; display: flex; align-items: center;"><i class="fas fa-download" style="margin-right: 0.5rem;"></i>CV</a>
       </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobileNav" type="button">
+        <span class="sr-only">Menü öffnen</span>
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
+    <ul id="mobileNav" class="nav-links mobile-nav" aria-label="Mobile Navigation">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#expertise" class="nav-link">Expertise</a></li>
+      <li><a href="#experience" class="nav-link">Erfahrung</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#downloads" class="nav-link">Downloads</a></li>
+      <li class="mobile-nav-cta">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt</a>
+        <a href="#downloads" class="btn btn-primary"><i class="fas fa-download" style="margin-right: 0.5rem;"></i>CV</a>
+        <a href="https://www.linkedin.com/in/mustafa-demir-331900202/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-linkedin" style="margin-right: 0.5rem;"></i>LinkedIn</a>
+      </li>
+    </ul>
 </nav>
 
   <!-- Hero Section -->
@@ -2283,9 +2414,9 @@
       <!-- Hero Image Section - CLOUD/DIGITALIZATION BACKGROUND -->
       <div class="hero-image-section">
         <div class="hero-image-container">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Digital Cloud Background" class="hero-image-bg">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Digital Cloud Background" class="hero-image-bg" width="800" height="600">
           <div class="hero-profile-overlay">
-            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/70623799/5bKILyYt7UdrHYwO.jpeg?Expires=1770384527&Signature=e9-b18n4BSHtNvWiCjLZeE8hYxRUi6~bf2HjeNEK~gkKUAOLkN8LNVUnhHByX7x1VdHM7SoQhlI3CjXn00I8kUNmJJyD9XY7vwaS9QCKqSMxIV6uvHhuJDpFa4kryNy9DozgjtsOg3CoeTydDM75eoqG3xf1zsI~aDVy377aF1~AnoK0ipknq1fx8qdvC5Xj0jdlwpB4~TuYLl1T0sJgO2vI1WjYWhV4-QFpBYSluX85JD8IXJyNDEEVRA78NMyQU6D06Wq5-024lkZsqzNWOMsTbu3MkmMJxN6RTfVEGYr5UQNzN0TYykD8vmDq1gpO61OWff~F20hw~RFsXCE~zA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Mustafa Demir" class="profile-img">
+            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/70623799/5bKILyYt7UdrHYwO.jpeg?Expires=1770384527&Signature=e9-b18n4BSHtNvWiCjLZeE8hYxRUi6~bf2HjeNEK~gkKUAOLkN8LNVUnhHByX7x1VdHM7SoQhlI3CjXn00I8kUNmJJyD9XY7vwaS9QCKqSMxIV6uvHhuJDpFa4kryNy9DozgjtsOg3CoeTydDM75eoqG3xf1zsI~aDVy377aF1~AnoK0ipknq1fx8qdvC5Xj0jdlwpB4~TuYLl1T0sJgO2vI1WjYWhV4-QFpBYSluX85JD8IXJyNDEEVRA78NMyQU6D06Wq5-024lkZsqzNWOMsTbu3MkmMJxN6RTfVEGYr5UQNzN0TYykD8vmDq1gpO61OWff~F20hw~RFsXCE~zA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Mustafa Demir" class="profile-img" width="600" height="600">
             <span class="profile-name">Mustafa Demir</span>
             <span class="profile-title">Technical Business Analyst & Cloud Architect</span>
           </div>
@@ -2961,6 +3092,7 @@
 
   <script>
     var enableSounds = false;
+    var canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
     // Beep Sound Function - Click
     function playBeep() {
@@ -3036,13 +3168,54 @@
       });
     }
 
+    // Mobile navigation toggle
+    var navToggle = document.querySelector('.nav-toggle');
+    var mobileNav = document.getElementById('mobileNav');
+
+    function closeMobileNav() {
+      document.body.classList.remove('nav-open');
+      if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if (navToggle && mobileNav) {
+      navToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      var mobileNavLinks = mobileNav.querySelectorAll('a');
+      mobileNavLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeMobileNav();
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeMobileNav();
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        var navbar = document.querySelector('.navbar');
+        if (document.body.classList.contains('nav-open') && navbar && !navbar.contains(e.target)) {
+          closeMobileNav();
+        }
+      });
+    }
+
     // Card stack interactivity
     var stacks = document.querySelectorAll('.stack-card');
     stacks.forEach(function(card, idx) {
       card.style.zIndex = 20 - idx;
-      card.addEventListener('mouseenter', function() {
-        playHoverSound();
-      });
+      if (canHover) {
+        card.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
+      }
       card.addEventListener('click', function() {
         playBeep();
         stacks.forEach(function(c, i) {
@@ -3079,91 +3252,111 @@
     });
 
     // Accordion hover sound
-    var accordionHeaders = document.querySelectorAll('.accordion-header');
-    accordionHeaders.forEach(function(header) {
-      header.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var accordionHeaders = document.querySelectorAll('.accordion-header');
+      accordionHeaders.forEach(function(header) {
+        header.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Mini Service Cards hover sound
-    var serviceCards = document.querySelectorAll('.hero-service-card');
-    serviceCards.forEach(function(card) {
-      card.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var serviceCards = document.querySelectorAll('.hero-service-card');
+      serviceCards.forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Navigation links hover sound
-    var navLinks = document.querySelectorAll('.nav-links a, .nav-contact, .logo');
-    navLinks.forEach(function(link) {
-      link.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var navLinks = document.querySelectorAll('.nav-links a, .nav-contact, .logo');
+      navLinks.forEach(function(link) {
+        link.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Certification cards hover sound
-    var certCards = document.querySelectorAll('.cert-card');
-    certCards.forEach(function(card) {
-      card.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var certCards = document.querySelectorAll('.cert-card');
+      certCards.forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Hero page buttons hover sound
-    var heroButtons = document.querySelectorAll('.hero-buttons a, .hero-buttons button');
-    heroButtons.forEach(function(btn) {
-      btn.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var heroButtons = document.querySelectorAll('.hero-buttons a, .hero-buttons button');
+      heroButtons.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Timeline entries hover sound
-    var timelineEntries = document.querySelectorAll('.timeline-entry');
-    timelineEntries.forEach(function(entry) {
-      entry.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var timelineEntries = document.querySelectorAll('.timeline-entry');
+      timelineEntries.forEach(function(entry) {
+        entry.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Skill tags hover sound
-    var skillTags = document.querySelectorAll('.skill-tag');
-    skillTags.forEach(function(tag) {
-      tag.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var skillTags = document.querySelectorAll('.skill-tag');
+      skillTags.forEach(function(tag) {
+        tag.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Download cards hover sound
-    var downloadCards = document.querySelectorAll('.download-card');
-    downloadCards.forEach(function(card) {
-      card.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var downloadCards = document.querySelectorAll('.download-card');
+      downloadCards.forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Contact cards & social links hover sound
-    var contactCards = document.querySelectorAll('.contact-card');
-    contactCards.forEach(function(card) {
-      card.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var contactCards = document.querySelectorAll('.contact-card');
+      contactCards.forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
 
-    var socialLinks = document.querySelectorAll('.social-link');
-    socialLinks.forEach(function(link) {
-      link.addEventListener('mouseenter', function() {
-        playHoverSound();
+      var socialLinks = document.querySelectorAll('.social-link');
+      socialLinks.forEach(function(link) {
+        link.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     // Button hover sound
-    var buttons = document.querySelectorAll('button, a.button, .download-button');
-    buttons.forEach(function(btn) {
-      btn.addEventListener('mouseenter', function() {
-        playHoverSound();
+    if (canHover) {
+      var buttons = document.querySelectorAll('button, a.button, .download-button');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+          playHoverSound();
+        });
       });
-    });
+    }
 
     function insertLovableBadge() {
       if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
