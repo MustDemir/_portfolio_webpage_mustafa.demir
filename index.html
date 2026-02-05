@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mustafa Demir | Technical Business Analyst & Cloud Solutions Berater </title>
+  <meta name="viewport" content="width=1400">
+  <title>Mustafa Demir | Technical Business Analyst & Cloud Solutions Architect </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -83,22 +83,6 @@
     body.light-mode .logo,
     body.light-mode .nav-links a {
       color: #1e293b;
-    }
-
-    body.light-mode .nav-toggle {
-      background: rgba(59, 130, 246, 0.08);
-      border-color: #e2e8f0;
-      color: #1e293b;
-    }
-
-    body.light-mode .mobile-nav a {
-      background: rgba(248, 250, 252, 0.9);
-      border-color: #e2e8f0;
-      color: #1e293b;
-    }
-
-    body.light-mode .mobile-nav-cta .btn-secondary {
-      border-color: #cbd5e1;
     }
 
     body.light-mode .hero-badge {
@@ -240,21 +224,6 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      min-width: 44px;
-      min-height: 44px;
-    }
-
-    .icon-only {
-      min-width: 44px;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem;
-    }
-
-    .icon-only i {
-      margin: 0;
     }
 
     .theme-toggle:hover {
@@ -304,7 +273,7 @@
       transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s, opacity 0.35s;
       border: 1.5px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(12px);
+      se-filter: blur(12px);
       box-shadow: 0 20px 60px rgba(0,0,0,0.35);
       animation: cardFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
@@ -312,7 +281,7 @@
     .stack-card:nth-child(1) { animation-delay: 0.05s; }
     .stack-card:nth-child(2) { animation-delay: 0.15s; }
     .stack-card:nth-child(3) { animation-delay: 0.25s; }
-    .stack-card:nth-child(4) { animation-delay: 0.35s; }
+     stack-card:nth-child(4) { animation-delay: 0.35s; }
     .stack-card:hover {
       transform: translateY(-8px) scale(1.03);
       box-shadow: 0 30px 80px rgba(59,130,246,0.18), 0 0 0 2px rgba(59,130,246,0.08) inset;
@@ -463,8 +432,7 @@
       background: var(--bg-primary);
       color: var(--text-white);
       line-height: 1.6;
-      min-width: 0;
-      overflow-x: hidden;
+      min-width: 1400px;
     }
     
     /* Navigation */
@@ -541,63 +509,6 @@
       transform: scale(1.2);
     }
 
-    .nav-toggle {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      background: rgba(59, 130, 246, 0.12);
-      color: var(--text-white);
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .nav-toggle:hover {
-      background: rgba(59, 130, 246, 0.2);
-      border-color: var(--accent-blue);
-    }
-
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      gap: 0.75rem;
-      padding: 0 1rem 1rem;
-      margin-top: 0.75rem;
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      pointer-events: none;
-      transition: max-height 0.35s ease, opacity 0.25s ease;
-    }
-
-    body.nav-open .mobile-nav {
-      max-height: 500px;
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .mobile-nav a {
-      padding: 0.75rem 0.5rem;
-      border-radius: 10px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--border-color);
-    }
-
-    .mobile-nav-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    .mobile-nav-cta .btn {
-      width: 100%;
-      justify-content: center;
-    }
-
     .nav-contact {
       display: flex;
       align-items: center;
@@ -614,18 +525,6 @@
 
     .nav-contact:hover {
       background: #2563eb;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
     }
     
     /* Hero Section */
@@ -809,9 +708,6 @@
     
     .hero-image-bg {
       display: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
     
     .hero-profile-overlay {
@@ -821,7 +717,7 @@
       transform: none;
       text-align: center;
       width: 100%;
-      padding: 0;
+      padding: 0;git pull origin main
     }
     
     .profile-img {
@@ -1104,8 +1000,7 @@
       line-height: 1.6;
       font-size: 0.96rem;
     }
-
-    /* Professionelle Icon-Styles - keine bunten Farben */
+Professionelle Icon-Styles - keine bunten Farben */
     .stack-icon {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.1));
       border: 1px solid rgba(59, 130, 246, 0.2);
@@ -1116,103 +1011,46 @@
     .stack-auto,
     .stack-ba {
       /* Alle Cards gleicher professioneller Style */
-    }
+   .22), rgba(139,92,246,0.24)); }
     .stack-ba .stack-icon { background: linear-gradient(135deg, #a855f7, #8b5cf6); }
 
-    /* ===== VERBESSERTE MOBILE STYLES ===== */
+    /* ===== RESPONSIVE MOBILE STYLES ===== */
     
     /* Tablet: 768px - 960px */
     @media (max-width: 960px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      
       .expertise-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
       }
+
+      .stack-layer.layer-2 { transform: translate(18px, 18px); }
+      .stack-layer.layer-3 { transform: translate(28px, 28px); }
       
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
       }
       
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
       }
       
       .downloads-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
       }
       
       .contact-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-      }
-
-      .achievements-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
       }
     }
     
     /* Mobile: unter 768px */
     @media (max-width: 768px) {
-      /* Navigation */
-      .navbar {
-        padding: 1rem;
-      }
-      
-      .nav-links.desktop-nav,
-      .nav-cta.desktop-nav {
-        display: none !important;
-      }
-
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .mobile-nav {
-        display: flex;
-      }
-
-      /* Hero Section */
       .hero {
-        padding: 100px 1.5rem 2rem;
-        min-height: auto;
+        padding: 2rem 1.5rem;
       }
       
-      .hero-container {
+      .hero-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-      }
-      
-      .hero-content {
-        padding-top: 0;
-      }
-      
-      .hero-content h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-      }
-      
-      .hero-description {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .hero-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-bottom: 2rem;
-      }
-      
-      .hero-buttons .btn {
-        width: 100%;
-        justify-content: center;
       }
       
       .hero-services {
@@ -1221,78 +1059,14 @@
       }
       
       .hero-image-container {
-        margin-top: 0;
-        padding: 2rem 1.5rem;
+        height: 400px;
+        margin-top: 2rem;
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
       }
       
-      .profile-img {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 1rem;
-      }
-      
-      .profile-name {
-        font-size: 1.5rem;
-      }
-      
-      .profile-title {
-        font-size: 0.95rem;
-      }
-
-      /* Sections */
-      .expertise,
-      .experience,
-      .achievements,
-      .skills,
-      .downloads,
-      .contact {
-        padding: 3rem 1.5rem;
-      }
-      
-      .section-header {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-      }
-      
-      .section-header-icon {
-        font-size: 2rem;
-      }
-      
-      .section-header h2 {
-        font-size: 1.75rem;
-      }
-      
-      .section-header p {
-        font-size: 0.95rem;
-      }
-
-      /* Expertise Cards */
       .expertise-grid {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
-      }
-      
-      .stack-card {
-        padding: 1.5rem;
-      }
-      
-      .stack-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 1.5rem;
-      }
-      
-      .stack-title {
-        font-size: 1.1rem;
-      }
-      
-      .stack-subtitle {
-        font-size: 0.9rem;
-      }
-
-      /* Stats */
-      .stats {
-        padding: 3rem 1.5rem;
+        gap: 1.5rem;
       }
       
       .stats-grid {
@@ -1300,169 +1074,223 @@
         gap: 1rem;
       }
       
-      .stat-item {
-        padding: 1.5rem;
-      }
-
-      /* Timeline */
-      .timeline-modern::before {
-        left: 20px;
-        transform: none;
-      }
-
-      .timeline-entry {
-        width: 100%;
-        padding: 1.5rem 1.25rem 1.5rem 3rem;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      .timeline-entry.left,
-      .timeline-entry.right {
-        margin: 0 0 2rem 0 !important;
-        padding-left: 3rem !important;
-        padding-right: 1.25rem !important;
-      }
-
-      .timeline-entry.left::before,
-      .timeline-entry.right::before {
-        left: 3px !important;
-        right: auto !important;
-      }
-      
-      .timeline-entry.left::after,
-      .timeline-entry.right::after {
-        left: 15px !important;
-        right: auto !important;
-        width: 30px !important;
-      }
-
-      /* Achievements */
       .achievements-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
       }
       
-      .accordion-header {
-        padding: 1.25rem 1.5rem;
-      }
-      
-      .accordion-header h3 {
-        font-size: 1rem;
-      }
-      
-      .accordion-body {
-        padding: 0 1.5rem 1.25rem;
-      }
-
-      /* Skills */
       .skills-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
       
-      .skill-category {
-        padding: 1.5rem;
+      .certs-grid {
+        grid-template-columns: 1fr;
       }
       
-      .cert-grid {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-      }
-
-      /* Downloads */
       .downloads-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
       
-      .download-card {
-        padding: 1.5rem;
-        min-height: auto;
-      }
-
-      /* Contact */
       .contact-grid {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
-      }
-      
-      .contact-card {
-        padding: 2rem;
-      }
-      
-      .social-links {
-        flex-wrap: wrap;
         gap: 1rem;
       }
-
-      /* Footer */
-      .footer {
-        padding: 2rem 1.5rem;
+      
+      /* Sections Padding */
+      .experience,
+      .skills,
+      .certifications,
+      .downloads,
+      .contact,
+      .achievements {
+        padding: 3rem 1.5rem;
       }
-
-      /* Remove 3D effects on mobile for better performance */
+      
+      /* Expertise Section */
+      #expertise .expertise-container {
+        padding: 0 1rem;
+      }
+      
+      /* Navigation */
+      .nav {
+        padding: 0.75rem 1rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      /* Typography */
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      /* Stack Cards */
+      .stack-card {
+        padding: 1.5rem;
+      }
+      
+      .stack-layer.layer-1 { transform: translate(8px, 8px); }
+      .stack-layer.layer-2 { transform: translate(14px, 14px); }
+      .stack-layer.layer-3 { transform: translate(20px, 20px); }
+      
+      /* Timeline */
+      .timeline-entry {
+        width: 100%;
+      }
+      
+      /* 3D Effects reduziert für Mobile Performance */
       .hero-service-card:hover,
       .stack-card:hover,
       .timeline-entry:hover,
       .skill-category:hover,
       .cert-card:hover,
-      .download-card:hover,
-      .contact-card:hover {
-        transform: translateY(-3px);
+      .download-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      /* Floating Animation aus für Mobile */
+      .profile-img {
+        animation: none;
+      }
+      
+      /* Mobile Fix - Leeren Platz entfernen */
+      .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 1rem 1rem 0.5rem !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      
+      .hero-container {
+        gap: 1rem !important;
+        padding-bottom: 0 !important;
+      }
+      
+      .hero-grid {
+        min-height: auto !important;
+        gap: 1rem !important;
+      }
+      
+      .hero-content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      
+      .hero-image-container {
+        height: 280px !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0 !important;
+      }
+      
+      /* Nächste Sektion direkt anschließen */
+      #expertise,
+      .hero + section,
+      .hero ~ section:first-of-type {
+        margin-top: 0 !important;
+        padding-top: 1.5rem !important;
+      }
+      
+      .expertise-grid {
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+      
+      #expertise {
+        padding: 1.5rem 1rem !important;
+      }
+      
+      section {
+        margin-bottom: 0;
+        padding: 2rem 1rem;
+      }
+      
+      .section-container,
+      .experience-container,
+      .expertise-container {
+        padding: 0 0.5rem;
+      }
+      
+      /* Mobile Spacing Fix - Leeren Platz komplett entfernen */
+      header, .nav {
+        padding: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+      
+      /* Die 3 kleinen Karten oben */
+      .expertise-preview,
+      .service-cards-small,
+      .hero-services {
+        margin: 0.5rem 0 !important;
+        gap: 0.5rem !important;
+      }
+      
+      /* Hauptbereich ohne großen Abstand */
+      main {
+        padding: 0.5rem !important;
+        margin: 0 !important;
+      }
+      
+      /* "Meine Expertise" Section direkt nach oben */
+      .expertise-section,
+      section[class*="expertise"],
+      #expertise {
+        margin-top: 1rem !important;
+        padding-top: 1rem !important;
+      }
+      
+      /* Die großen Karten unten näher ran */
+      .expertise-cards,
+      .service-cards,
+      .expertise-grid {
+        margin-top: 1rem !important;
+        gap: 1rem !important;
+      }
+      
+      /* Alle Sections kompakter */
+      section {
+        padding: 1rem 0.5rem !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      /* Body ohne Padding */
+      body {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      
+      /* Container kompakt */
+      .container,
+      .section-container {
+        padding: 0.5rem !important;
+        max-width: 100% !important;
       }
     }
     
     /* Sehr kleine Handys: unter 480px */
     @media (max-width: 480px) {
-      .navbar {
-        padding: 0.75rem;
-      }
-      
       .hero {
-        padding: 90px 1rem 1.5rem;
-      }
-      
-      .hero-content h1 {
-        font-size: 1.75rem;
-      }
-      
-      .hero-badge {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-      }
-      
-      .expertise,
-      .experience,
-      .achievements,
-      .skills,
-      .downloads,
-      .contact {
-        padding: 2.5rem 1rem;
-      }
-      
-      .section-header {
-        padding: 1.25rem;
-      }
-      
-      .section-header h2 {
-        font-size: 1.5rem;
-      }
-      
-      .hero-image-container {
         padding: 1.5rem 1rem;
       }
       
-      .profile-img {
-        width: 120px;
-        height: 120px;
+      .hero-title {
+        font-size: 1.75rem;
       }
       
-      .profile-name {
-        font-size: 1.35rem;
+      .hero-subtitle {
+        font-size: 0.9rem;
       }
       
-      .stack-card,
+      .hero-image-container {
+        height: 320px;
+      }
+      
       .stat-item,
       .skill-category,
       .download-card,
@@ -1471,19 +1299,20 @@
       }
       
       .timeline-entry {
-        padding: 1.25rem 1rem 1.25rem 2.5rem;
+        padding: 1.25rem 1rem;
       }
       
-      .accordion-header {
-        padding: 1rem 1.25rem;
+      .stack-card {
+        padding: 1.25rem;
       }
       
-      .accordion-body {
-        padding: 0 1.25rem 1rem;
+      .expertise-list li {
+        font-size: 0.9rem;
       }
       
-      .btn {
-        padding: 0.75rem 1.5rem;
+      .theme-toggle {
+        width: 36px;
+        height: 36px;
         font-size: 0.9rem;
       }
     }
@@ -1664,35 +1493,24 @@
 
     @media (max-width: 960px) {
       .timeline-modern::before {
-        left: 20px;
+        left: 24px;
         transform: none;
       }
 
       .timeline-entry {
         width: 100%;
-        padding: 1.5rem 1.25rem 1.5rem 3rem;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        padding: 1.5rem 1.25rem 1.5rem 2.75rem;
       }
 
       .timeline-entry.left,
       .timeline-entry.right {
-        margin: 0 0 2rem 0 !important;
-        padding-left: 3rem !important;
-        padding-right: 1.25rem !important;
+        margin: 0 0 2rem 0;
       }
 
       .timeline-entry.left::before,
       .timeline-entry.right::before {
-        left: 3px !important;
-        right: auto !important;
-      }
-      
-      .timeline-entry.left::after,
-      .timeline-entry.right::after {
-        left: 15px !important;
-        right: auto !important;
-        width: 30px !important;
+        left: 6px;
+        right: auto;
       }
     }
     
@@ -2285,226 +2103,8 @@
     }
 
     .expertise-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 32px rgba(0,0,0,0.18);
-    }
-
-    /* Refined button styling */
-    .btn {
-      border-radius: 999px;
-      padding: 0.85rem 1.4rem;
-      font-weight: 600;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
-      color: #ffffff;
-      box-shadow: 0 12px 24px rgba(59, 130, 246, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(59, 130, 246, 0.35);
-    }
-
-    .btn-secondary {
-      background: rgba(30, 41, 59, 0.7);
-      border: 1px solid var(--border-color);
-      color: var(--text-white);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent-blue);
-    }
-
-    body.light-mode .btn-secondary {
-      background: #ffffff;
-      color: #1e293b;
-      border-color: #e2e8f0;
-    }
-
-    /* Lovable Badge */
-    @font-face {
-      font-family: 'CameraPlainVariable';
-      src: url('https://cdn.gpteng.co/mcp-widgets/v1/fonts/CameraPlainVariable.woff2') format('woff2');
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    #lovable-badge {
-      --badge-bg: #1b1b1b;
-      --badge-text: #c5c1b9;
-      --badge-text-hover: #dcdad5;
-      --badge-radius: 6px;
-      --badge-padding: 8px;
-      --badge-gap: 6px;
-      --badge-shadow:
-        0 0 0 1px rgba(0, 0, 0, 0.88),
-        0 1px 0 0 rgba(0, 0, 0, 0.04),
-        0 2px 2px -1px rgba(0, 0, 0, 0.08),
-        0 4px 4px -2px rgba(0, 0, 0, 0.08),
-        0 8px 8px -4px rgba(0, 0, 0, 0.08),
-        0 16px 16px -8px rgba(0, 0, 0, 0.08);
-      --badge-transition-duration: 0.2s;
-      --badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
-      --focus-color: #575ecf;
-      --focus-offset: 2px;
-      --focus-width: 2px;
-
-      position: fixed;
-      bottom: 12px;
-      right: 12px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      z-index: 1000000;
-      background-color: var(--badge-bg);
-      color: var(--badge-text);
-      border-radius: var(--badge-radius);
-      box-shadow: var(--badge-shadow);
-      font-size: 12px;
-      font-family: CameraPlainVariable, "CameraPlainVariable Fallback", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 400 !important;
-      text-transform: none !important;
-      font-feature-settings: normal !important;
-      transform: translateZ(0);
-      will-change: transform, opacity;
-      transition: opacity 0.24s var(--badge-transition-easing), transform 0.24s var(--badge-transition-easing);
-    }
-
-    #lovable-badge.closing {
-      opacity: 0;
-      transform: translateY(8px);
-      pointer-events: none;
-    }
-
-    #lovable-badge-cta {
-      display: flex;
-      align-items: center;
-      gap: var(--badge-gap);
-      padding: 0 var(--badge-padding);
-      height: 100%;
-      color: inherit;
-      text-decoration: none;
-      white-space: nowrap;
-      border-radius: var(--badge-radius) 0 0 var(--badge-radius);
-      transition:
-        background-color var(--badge-transition-duration) ease,
-        color var(--badge-transition-duration) ease,
-        transform 0.1s ease;
-    }
-
-    #lovable-badge-cta:hover {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--badge-text-hover);
-    }
-
-    #lovable-badge-cta:active {
-      transform: scale(0.98);
-    }
-
-    #lovable-badge-cta:focus {
-      outline: none;
-    }
-
-    #lovable-badge-cta:focus-visible {
-      outline: var(--focus-width) solid var(--focus-color);
-      outline-offset: var(--focus-offset);
-      z-index: 1;
-    }
-
-    #lovable-badge-text {
-      line-height: 1;
-    }
-
-    #lovable-badge-divider {
-      width: 1px;
-      height: 24px;
-      background-color: rgba(255, 255, 255, 0.04);
-      flex-shrink: 0;
-    }
-
-    #lovable-badge-close {
-      width: 24px;
-      height: 24px;
-      min-width: 24px;
-      min-height: 24px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
-      flex-shrink: 0;
-      transition:
-        background-color var(--badge-transition-duration) ease,
-        transform 0.1s ease;
-    }
-
-    #lovable-badge-close:hover {
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    #lovable-badge-close:active {
-      transform: scale(0.92);
-    }
-
-    #lovable-badge-close:focus {
-      outline: none;
-    }
-
-    #lovable-badge-close:focus-visible {
-      outline: var(--focus-width) solid var(--focus-color);
-      outline-offset: calc(var(--focus-offset) * -1);
-      z-index: 1;
-    }
-
-    #lovable-badge-close svg path {
-      fill: var(--badge-text);
-      transition: fill var(--badge-transition-duration) ease;
-    }
-
-    #lovable-badge-close:hover svg path {
-      fill: var(--badge-text-hover);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #lovable-badge-cta,
-      #lovable-badge-close,
-      #lovable-badge-close svg path {
-        transition: none;
-      }
-
-      #lovable-badge-cta:active,
-      #lovable-badge-close:active {
-        transform: none;
-      }
-
-      .mobile-nav {
-        transition: none;
-      }
-    }
-
-    @media (prefers-contrast: high) {
-      #lovable-badge {
-        --badge-bg: #000;
-        --badge-text: #fff;
-        --badge-text-hover: #fff;
-        border: 2px solid currentColor;
-      }
-
-      #lovable-badge-cta:focus-visible,
-      #lovable-badge-close:focus-visible {
-        outline-width: 3px;
-      }
+      transform: scale(1.05);      /* 5% größer */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
   </style>
 </head>
@@ -2523,27 +2123,11 @@
         <li><a href="#downloads" class="nav-link">Downloads</a></li>
       </ul>
       <div class="nav-cta desktop-nav" style="display: flex; gap: 1rem; align-items: center;">
-        <a href="https://www.linkedin.com/in/mustafa-demir-331900202/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary icon-only" title="LinkedIn" style="padding: 0.5rem 1rem; display: flex; align-items: center;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/mustafa-demir-331900202/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="LinkedIn" style="padding: 0.5rem 1rem; display: flex; align-items: center;"><i class="fab fa-linkedin"></i></a>
         <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; display: flex; align-items: center;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt</a>
         <a href="#downloads" class="btn btn-primary" style="padding: 0.5rem 1.2rem; display: flex; align-items: center;"><i class="fas fa-download" style="margin-right: 0.5rem;"></i>CV</a>
       </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="mobileNav" type="button">
-        <span class="sr-only">Menü öffnen</span>
-        <i class="fas fa-bars" aria-hidden="true"></i>
-      </button>
     </div>
-    <ul id="mobileNav" class="nav-links mobile-nav" aria-label="Mobile Navigation">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#expertise" class="nav-link">Expertise</a></li>
-      <li><a href="#experience" class="nav-link">Erfahrung</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#downloads" class="nav-link">Downloads</a></li>
-      <li class="mobile-nav-cta">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Kontakt</a>
-        <a href="#downloads" class="btn btn-primary"><i class="fas fa-download" style="margin-right: 0.5rem;"></i>CV</a>
-        <a href="https://www.linkedin.com/in/mustafa-demir-331900202/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-linkedin" style="margin-right: 0.5rem;"></i>LinkedIn</a>
-      </li>
-    </ul>
 </nav>
 
   <!-- Hero Section -->
@@ -2591,9 +2175,9 @@
       <!-- Hero Image Section - CLOUD/DIGITALIZATION BACKGROUND -->
       <div class="hero-image-section">
         <div class="hero-image-container">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Digital Cloud Background" class="hero-image-bg" width="800" height="600">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Digital Cloud Background" class="hero-image-bg">
           <div class="hero-profile-overlay">
-            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/70623799/5bKILyYt7UdrHYwO.jpeg?Expires=1770384527&Signature=e9-b18n4BSHtNvWiCjLZeE8hYxRUi6~bf2HjeNEK~gkKUAOLkN8LNVUnhHByX7x1VdHM7SoQhlI3CjXn00I8kUNmJJyD9XY7vwaS9QCKqSMxIV6uvHhuJDpFa4kryNy9DozgjtsOg3CoeTydDM75eoqG3xf1zsI~aDVy377aF1~AnoK0ipknq1fx8qdvC5Xj0jdlwpB4~TuYLl1T0sJgO2vI1WjYWhV4-QFpBYSluX85JD8IXJyNDEEVRA78NMyQU6D06Wq5-024lkZsqzNWOMsTbu3MkmMJxN6RTfVEGYr5UQNzN0TYykD8vmDq1gpO61OWff~F20hw~RFsXCE~zA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Mustafa Demir" class="profile-img" width="600" height="600">
+            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/70623799/5bKILyYt7UdrHYwO.jpeg?Expires=1770384527&Signature=e9-b18n4BSHtNvWiCjLZeE8hYxRUi6~bf2HjeNEK~gkKUAOLkN8LNVUnhHByX7x1VdHM7SoQhlI3CjXn00I8kUNmJJyD9XY7vwaS9QCKqSMxIV6uvHhuJDpFa4kryNy9DozgjtsOg3CoeTydDM75eoqG3xf1zsI~aDVy377aF1~AnoK0ipknq1fx8qdvC5Xj0jdlwpB4~TuYLl1T0sJgO2vI1WjYWhV4-QFpBYSluX85JD8IXJyNDEEVRA78NMyQU6D06Wq5-024lkZsqzNWOMsTbu3MkmMJxN6RTfVEGYr5UQNzN0TYykD8vmDq1gpO61OWff~F20hw~RFsXCE~zA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Mustafa Demir" class="profile-img">
             <span class="profile-name">Mustafa Demir</span>
             <span class="profile-title">Technical Business Analyst & Cloud Architect</span>
           </div>
@@ -3268,14 +2852,8 @@
   </footer>
 
   <script>
-    var enableSounds = false;
-    var canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
     // Beep Sound Function - Click
     function playBeep() {
-      if (!enableSounds) {
-        return;
-      }
       const audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
@@ -3295,9 +2873,6 @@
 
     // Hover Sound Function - subtler, höher
     function playHoverSound() {
-      if (!enableSounds) {
-        return;
-      }
       const audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
@@ -3345,54 +2920,13 @@
       });
     }
 
-    // Mobile navigation toggle
-    var navToggle = document.querySelector('.nav-toggle');
-    var mobileNav = document.getElementById('mobileNav');
-
-    function closeMobileNav() {
-      document.body.classList.remove('nav-open');
-      if (navToggle) {
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    if (navToggle && mobileNav) {
-      navToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var isOpen = document.body.classList.toggle('nav-open');
-        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-
-      var mobileNavLinks = mobileNav.querySelectorAll('a');
-      mobileNavLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          closeMobileNav();
-        });
-      });
-
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          closeMobileNav();
-        }
-      });
-
-      document.addEventListener('click', function(e) {
-        var navbar = document.querySelector('.navbar');
-        if (document.body.classList.contains('nav-open') && navbar && !navbar.contains(e.target)) {
-          closeMobileNav();
-        }
-      });
-    }
-
     // Card stack interactivity
     var stacks = document.querySelectorAll('.stack-card');
     stacks.forEach(function(card, idx) {
       card.style.zIndex = 20 - idx;
-      if (canHover) {
-        card.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
-      }
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
+      });
       card.addEventListener('click', function() {
         playBeep();
         stacks.forEach(function(c, i) {
@@ -3429,194 +2963,103 @@
     });
 
     // Accordion hover sound
-    if (canHover) {
-      var accordionHeaders = document.querySelectorAll('.accordion-header');
-      accordionHeaders.forEach(function(header) {
-        header.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(function(header) {
+      header.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Mini Service Cards hover sound
-    if (canHover) {
-      var serviceCards = document.querySelectorAll('.hero-service-card');
-      serviceCards.forEach(function(card) {
-        card.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var serviceCards = document.querySelectorAll('.hero-service-card');
+    serviceCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Navigation links hover sound
-    if (canHover) {
-      var navLinks = document.querySelectorAll('.nav-links a, .nav-contact, .logo');
-      navLinks.forEach(function(link) {
-        link.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var navLinks = document.querySelectorAll('.nav-links a, .nav-contact, .logo');
+    navLinks.forEach(function(link) {
+      link.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Certification cards hover sound
-    if (canHover) {
-      var certCards = document.querySelectorAll('.cert-card');
-      certCards.forEach(function(card) {
-        card.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var certCards = document.querySelectorAll('.cert-card');
+    certCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Hero page buttons hover sound
-    if (canHover) {
-      var heroButtons = document.querySelectorAll('.hero-buttons a, .hero-buttons button');
-      heroButtons.forEach(function(btn) {
-        btn.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var heroButtons = document.querySelectorAll('.hero-buttons a, .hero-buttons button');
+    heroButtons.forEach(function(btn) {
+      btn.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Timeline entries hover sound
-    if (canHover) {
-      var timelineEntries = document.querySelectorAll('.timeline-entry');
-      timelineEntries.forEach(function(entry) {
-        entry.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var timelineEntries = document.querySelectorAll('.timeline-entry');
+    timelineEntries.forEach(function(entry) {
+      entry.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Skill tags hover sound
-    if (canHover) {
-      var skillTags = document.querySelectorAll('.skill-tag');
-      skillTags.forEach(function(tag) {
-        tag.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(function(tag) {
+      tag.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Download cards hover sound
-    if (canHover) {
-      var downloadCards = document.querySelectorAll('.download-card');
-      downloadCards.forEach(function(card) {
-        card.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var downloadCards = document.querySelectorAll('.download-card');
+    downloadCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Contact cards & social links hover sound
-    if (canHover) {
-      var contactCards = document.querySelectorAll('.contact-card');
-      contactCards.forEach(function(card) {
-        card.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var contactCards = document.querySelectorAll('.contact-card');
+    contactCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
+    });
 
-      var socialLinks = document.querySelectorAll('.social-link');
-      socialLinks.forEach(function(link) {
-        link.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(function(link) {
+      link.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
     // Button hover sound
-    if (canHover) {
-      var buttons = document.querySelectorAll('button, a.button, .download-button');
-      buttons.forEach(function(btn) {
-        btn.addEventListener('mouseenter', function() {
-          playHoverSound();
-        });
+    var buttons = document.querySelectorAll('button, a.button, .download-button');
+    buttons.forEach(function(btn) {
+      btn.addEventListener('mouseenter', function() {
+        playHoverSound();
       });
-    }
+    });
 
-    function insertLovableBadge() {
-      if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
-        return;
+    // Mobile Fix - Leeren Platz entfernen
+    const mobileStyle = document.createElement('style');
+    mobileStyle.textContent = `
+      @media (max-width: 768px) {
+        * { margin-bottom: 1rem !important; }
+        .hero-section, .hero { min-height: 40vh !important; padding: 1rem !important; }
+        .expertise-grid, .cards-grid { gap: 1rem !important; margin: 1rem 0 !important; }
+        body { padding: 0.5rem !important; }
       }
-
-      var hostname = window.location.hostname;
-      var isDev = window.location.protocol === 'file:' ||
-        hostname === '' ||
-        hostname === 'localhost' ||
-        hostname === '127.0.0.1' ||
-        hostname === '0.0.0.0' ||
-        hostname === '::1' ||
-        hostname.endsWith('.local');
-
-      if (!isDev) {
-        return;
-      }
-
-      if (document.getElementById('lovable-badge')) {
-        return;
-      }
-
-      var badgeHtml = `
-        <aside id="lovable-badge" role="complementary" aria-label="Edit with Lovable">
-          <a
-            id="lovable-badge-cta"
-            target="_blank"
-            href="https://lovable.dev/projects/3adf6fcf-f42b-469d-94f0-8bdd44ce19bb?utm_source=lovable-badge"
-            rel="noopener"
-            aria-label="Edit with Lovable">
-            <span id="lovable-badge-text">Edit with</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="16" fill="none" viewBox="0 0 52 16">
-              <path fill="#FCFBF8" fill-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" clip-rule="evenodd"/>
-              <path fill="#FCFBF8" d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z"/>
-              <path fill="url(#a)" fill-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" clip-rule="evenodd"/>
-              <defs>
-                <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientUnits="userSpaceOnUse">
-                  <stop offset=".106" stop-color="#FE7B02"/>
-                  <stop offset=".394" stop-color="#FE3F21"/>
-                  <stop offset=".608" stop-color="#F858BC"/>
-                  <stop offset=".929" stop-color="#575ECF"/>
-                </radialGradient>
-              </defs>
-            </svg>
-          </a>
-
-          <span id="lovable-badge-divider" aria-hidden="true"></span>
-
-          <button
-            id="lovable-badge-close"
-            aria-label="Dismiss"
-            title="Dismiss"
-            type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"/>
-            </svg>
-          </button>
-        </aside>
-      `;
-
-      document.body.insertAdjacentHTML('beforeend', badgeHtml);
-
-      var lovableScript = document.createElement('script');
-      lovableScript.src = 'https://cdn.gpteng.co/lovable.js';
-      lovableScript.type = 'module';
-      document.body.appendChild(lovableScript);
-
-      var badge = document.getElementById('lovable-badge');
-      var closeButton = document.getElementById('lovable-badge-close');
-      if (closeButton && badge) {
-        closeButton.addEventListener('click', function(event) {
-          event.preventDefault();
-          event.stopPropagation();
-          badge.classList.add('closing');
-          setTimeout(function() {
-            badge.style.display = 'none';
-          }, 240);
-        });
-      }
-    }
-
-    insertLovableBadge();
+    `;
+    document.head.appendChild(mobileStyle);
   </script>
 </body>
 </html>
