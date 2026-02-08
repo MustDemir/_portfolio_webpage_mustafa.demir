@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1400">
-  <title>Mustafa Demir | Technical Business Analyst & Cloud Solutions Architect </title>
+  <title>Mustafa Demir | AI & Cloud Architect mit Business-Verantwortung </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -186,6 +186,26 @@
       border-color: #e2e8f0;
     }
 
+    body.light-mode .skill-tagline {
+      color: rgba(30, 41, 59, 0.55);
+    }
+    body.light-mode .skill-bullets li {
+      color: rgba(30, 41, 59, 0.75);
+    }
+    body.light-mode .skills-languages {
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+    }
+    body.light-mode .skills-lang-label {
+      color: #1e293b;
+    }
+    body.light-mode .skills-lang-item {
+      color: rgba(30, 41, 59, 0.7);
+    }
+    body.light-mode .skills-lang-sep {
+      color: rgba(30, 41, 59, 0.3);
+    }
+
     body.light-mode .skill-tag {
       background: #f1f5f9;
       color: #334155;
@@ -273,7 +293,7 @@
       transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s, opacity 0.35s;
       border: 1.5px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.04);
-      se-filter: blur(12px);
+      backdrop-filter: blur(12px);
       box-shadow: 0 20px 60px rgba(0,0,0,0.35);
       animation: cardFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
@@ -305,21 +325,19 @@
     }
 
     .stack-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       display: grid;
       place-items: center;
-      font-size: 1.8rem;
-      color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
-      backdrop-filter: blur(6px);
+      font-size: 1.4rem;
+      margin-top: 6px;
     }
 
-    .stack-cloud .stack-icon { background: linear-gradient(135deg, #3b82f6, #0ea5e9); }
-    .stack-re .stack-icon { background: linear-gradient(135deg, #22c55e, #10b981); }
-    .stack-auto .stack-icon { background: linear-gradient(135deg, #f97316, #fb923c); }
-    .stack-ba .stack-icon { background: linear-gradient(135deg, #a855f7, #8b5cf6); }
+    .stack-cloud .stack-icon { color: var(--color-cloud); background: rgba(59, 130, 246, 0.1); }
+    .stack-re .stack-icon { color: var(--color-re); background: rgba(34, 197, 94, 0.1); }
+    .stack-auto .stack-icon { color: var(--color-auto); background: rgba(249, 115, 22, 0.1); }
+    .stack-ba .stack-icon { color: var(--color-ba); background: rgba(168, 85, 247, 0.1); }
     .stack-title {
       font-size: 1.3rem;
       font-weight: 700;
@@ -362,6 +380,30 @@
       color: rgba(255,255,255,0.8);
       line-height: 1.6;
       font-size: 0.96rem;
+    }
+
+    ul.stack-desc {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    ul.stack-desc li {
+      position: relative;
+      padding-left: 1.4em;
+      margin-bottom: 0.45em;
+    }
+
+    ul.stack-desc li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14b8a6, #3b82f6);
+      box-shadow: 0 0 6px rgba(20, 184, 166, 0.4);
     }
 
     /* Modernisierung und Vereinheitlichung der Expertise Cards */
@@ -529,8 +571,8 @@
     
     /* Hero Section */
     .hero {
-      min-height: 100vh;
-      padding: 120px 4rem 60px;
+      min-height: auto;
+      padding: 120px 4rem 4rem;
       background: var(--bg-primary);
       position: relative;
     }
@@ -566,15 +608,15 @@
     }
     
     .hero-content h1 {
-      font-size: 3.5rem;
+      font-size: 2.9rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
       line-height: 1.15;
-      color: var(--text-white);
+      color: var(--accent-blue);
     }
     
     .hero-content h1 span {
-      color: var(--accent-blue);
+      color: var(--text-white); 
     }
     
     .hero-description {
@@ -700,7 +742,7 @@
       overflow: hidden;
       height: auto;
       background: var(--bg-primary);
-      margin-top: 5.5rem;
+      margin-top: 0;
       padding: 4rem 3rem;
       border: 2px solid var(--accent-blue);
       box-shadow: none;
@@ -717,12 +759,12 @@
       transform: none;
       text-align: center;
       width: 100%;
-      padding: 0;git pull origin main
+      padding: 0;
     }
     
     .profile-img {
-      width: 180px;
-      height: 180px;
+      width: 234px;
+      height: 234px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 15%;
@@ -951,15 +993,12 @@
     }
 
     .stack-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       display: grid;
       place-items: center;
-      font-size: 1.8rem;
-      color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
-      backdrop-filter: blur(6px);
+      font-size: 1.4rem;
     }
 
     .stack-title {
@@ -1000,19 +1039,41 @@
       line-height: 1.6;
       font-size: 0.96rem;
     }
-Professionelle Icon-Styles - keine bunten Farben */
-    .stack-icon {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.1));
-      border: 1px solid rgba(59, 130, 246, 0.2);
+
+    ul.stack-desc {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
     }
-    
-    .stack-cloud,
-    .stack-re,
-    .stack-auto,
-    .stack-ba {
-      /* Alle Cards gleicher professioneller Style */
-   .22), rgba(139,92,246,0.24)); }
-    .stack-ba .stack-icon { background: linear-gradient(135deg, #a855f7, #8b5cf6); }
+
+    ul.stack-desc li {
+      position: relative;
+      padding-left: 1.4em;
+      margin-bottom: 0.45em;
+    }
+
+    ul.stack-desc li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14b8a6, #3b82f6);
+      box-shadow: 0 0 6px rgba(20, 184, 166, 0.4);
+    }
+
+    /* Expertise Card Color Variants – gleiche Palette wie Accordion */
+    .stack-cloud:hover { border-color: var(--color-cloud); box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15); }
+    .stack-re:hover { border-color: var(--color-re); box-shadow: 0 8px 24px rgba(34, 197, 94, 0.15); }
+    .stack-auto:hover { border-color: var(--color-auto); box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15); }
+    .stack-ba:hover { border-color: var(--color-ba); box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15); }
+
+    .stack-cloud .stack-icon { color: var(--color-cloud); background: rgba(59, 130, 246, 0.1); }
+    .stack-re .stack-icon { color: var(--color-re); background: rgba(34, 197, 94, 0.1); }
+    .stack-auto .stack-icon { color: var(--color-auto); background: rgba(249, 115, 22, 0.1); }
+    .stack-ba .stack-icon { color: var(--color-ba); background: rgba(168, 85, 247, 0.1); }
 
     /* ===== RESPONSIVE MOBILE STYLES ===== */
     
@@ -1147,7 +1208,6 @@ Professionelle Icon-Styles - keine bunten Farben */
       /* 3D Effects reduziert für Mobile Performance */
       .hero-service-card:hover,
       .stack-card:hover,
-      .timeline-entry:hover,
       .skill-category:hover,
       .cert-card:hover,
       .download-card:hover {
@@ -1159,136 +1219,60 @@ Professionelle Icon-Styles - keine bunten Farben */
         animation: none;
       }
       
-      /* Mobile Fix - Leeren Platz entfernen */
+      /* Mobile Fix – saubere, einheitliche Abstände */
       .hero {
-        min-height: auto !important;
-        height: auto !important;
-        padding: 1rem 1rem 0.5rem !important;
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
+        padding: 5rem 1.5rem 2rem;
       }
-      
+
       .hero-container {
-        gap: 1rem !important;
-        padding-bottom: 0 !important;
+        gap: 1.5rem;
       }
-      
-      .hero-grid {
-        min-height: auto !important;
-        gap: 1rem !important;
-      }
-      
+
       .hero-content {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+        padding-top: 0;
       }
-      
+
       .hero-image-container {
-        height: 280px !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 0 !important;
+        height: 280px;
+        margin-top: 0.5rem;
       }
-      
-      /* Nächste Sektion direkt anschließen */
-      #expertise,
-      .hero + section,
-      .hero ~ section:first-of-type {
-        margin-top: 0 !important;
-        padding-top: 1.5rem !important;
+
+      /* Einheitliches Section-Spacing Mobile */
+      section {
+        padding: 3rem 1.5rem;
       }
-      
+
+      .section-container,
+      .experience-container {
+        padding: 0;
+        max-width: 100%;
+      }
+
       .expertise-grid {
         gap: 1rem;
-        margin: 1rem 0;
       }
-      
-      #expertise {
-        padding: 1.5rem 1rem !important;
-      }
-      
-      section {
-        margin-bottom: 0;
-        padding: 2rem 1rem;
-      }
-      
-      .section-container,
-      .experience-container,
-      .expertise-container {
-        padding: 0 0.5rem;
-      }
-      
-      /* Mobile Spacing Fix - Leeren Platz komplett entfernen */
-      header, .nav {
-        padding: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-      }
-      
-      /* Die 3 kleinen Karten oben */
-      .expertise-preview,
-      .service-cards-small,
+
       .hero-services {
-        margin: 0.5rem 0 !important;
-        gap: 0.5rem !important;
-      }
-      
-      /* Hauptbereich ohne großen Abstand */
-      main {
-        padding: 0.5rem !important;
-        margin: 0 !important;
-      }
-      
-      /* "Meine Expertise" Section direkt nach oben */
-      .expertise-section,
-      section[class*="expertise"],
-      #expertise {
-        margin-top: 1rem !important;
-        padding-top: 1rem !important;
-      }
-      
-      /* Die großen Karten unten näher ran */
-      .expertise-cards,
-      .service-cards,
-      .expertise-grid {
-        margin-top: 1rem !important;
-        gap: 1rem !important;
-      }
-      
-      /* Alle Sections kompakter */
-      section {
-        padding: 1rem 0.5rem !important;
-        margin-bottom: 1rem !important;
-      }
-      
-      /* Body ohne Padding */
-      body {
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      
-      /* Container kompakt */
-      .container,
-      .section-container {
-        padding: 0.5rem !important;
-        max-width: 100% !important;
+        gap: 0.75rem;
       }
     }
     
     /* Sehr kleine Handys: unter 480px */
     @media (max-width: 480px) {
-      .hero {
-        padding: 1.5rem 1rem;
+      section {
+        padding: 2.5rem 1rem;
       }
-      
+
+      .hero {
+        padding: 4.5rem 1rem 2rem;
+      }
+
       .hero-title {
         font-size: 1.75rem;
       }
       
       .hero-subtitle {
         font-size: 0.9rem;
-      }
-      
-      .hero-image-container {
-        height: 320px;
       }
       
       .stat-item,
@@ -1304,10 +1288,6 @@ Professionelle Icon-Styles - keine bunten Farben */
       
       .stack-card {
         padding: 1.25rem;
-      }
-      
-      .expertise-list li {
-        font-size: 0.9rem;
       }
       
       .theme-toggle {
@@ -1340,55 +1320,43 @@ Professionelle Icon-Styles - keine bunten Farben */
       top: 0;
       bottom: 0;
       left: 50%;
-      width: 4px;
-      background: linear-gradient(180deg, var(--accent-blue), var(--accent-teal));
+      width: 2px;
+      background: linear-gradient(180deg, rgba(59,130,246,0.1), var(--accent-blue) 15%, var(--accent-teal) 85%, rgba(20,184,166,0.1));
       transform: translateX(-50%);
-      opacity: 1;
-      box-shadow: 0 0 12px rgba(75, 137, 220, 0.6), 0 0 24px rgba(20, 184, 166, 0.3);
     }
 
     .timeline-entry {
       position: relative;
-      width: calc(50% - 2rem);
+      width: calc(50% - 2.5rem);
       background: var(--bg-primary);
       border: 1px solid var(--border-color);
       border-radius: 14px;
       padding: 1.75rem 1.5rem;
       margin-bottom: 2.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transform: scale(1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       z-index: 1;
-      transition: all 0.3s ease;
-      will-change: transform;
-      backface-visibility: hidden;
     }
-    
+
     .timeline-entry::after {
       content: '';
       position: absolute;
-      top: 24px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(75, 137, 220, 0.5), transparent);
+      top: 28px;
+      height: 1px;
+      background: var(--border-color);
       z-index: 0;
-    }
-
-    .timeline-entry:hover {
-      transform: scale(1.05) translateY(-5px);
-      z-index: 10;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-      border-color: var(--accent-blue);
     }
 
     .timeline-entry::before {
       content: '';
       position: absolute;
-      top: 24px;
-      width: 14px;
-      height: 14px;
-      background: var(--accent-blue);
-      border: 3px solid var(--bg-secondary);
+      top: 22px;
+      width: 12px;
+      height: 12px;
+      background: var(--bg-secondary);
+      border: 2px solid var(--accent-blue);
       border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+      z-index: 2;
+      box-shadow: 0 0 0 4px var(--bg-secondary);
     }
 
     .timeline-entry.left {
@@ -1398,12 +1366,12 @@ Professionelle Icon-Styles - keine bunten Farben */
     }
 
     .timeline-entry.left::before {
-      right: -36px;
+      right: -31px;
     }
-    
+
     .timeline-entry.left::after {
-      right: -36px;
-      width: 36px;
+      right: -25px;
+      width: 25px;
     }
 
     .timeline-entry.right {
@@ -1413,12 +1381,12 @@ Professionelle Icon-Styles - keine bunten Farben */
     }
 
     .timeline-entry.right::before {
-      left: -36px;
+      left: -31px;
     }
-    
+
     .timeline-entry.right::after {
-      left: -36px;
-      width: 36px;
+      left: -25px;
+      width: 25px;
     }
 
     .timeline-date {
@@ -1458,13 +1426,27 @@ Professionelle Icon-Styles - keine bunten Farben */
 
     .timeline-list {
       margin: 0.5rem 0 0;
-      padding-left: 1.1rem;
+      padding-left: 0;
+      list-style: none;
       color: rgba(255,255,255,0.8);
       line-height: 1.6;
     }
 
     .timeline-list li {
-      padding: 0.25rem 0;
+      position: relative;
+      padding: 0.25rem 0 0.25rem 1.4em;
+    }
+
+    .timeline-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14b8a6, #3b82f6);
+      box-shadow: 0 0 6px rgba(20, 184, 166, 0.4);
     }
 
     .timeline-meta {
@@ -1480,6 +1462,22 @@ Professionelle Icon-Styles - keine bunten Farben */
       color: var(--accent-blue);
     }
 
+    .timeline-impact {
+      margin-top: 0.8rem;
+      padding: 0.7rem 1rem;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(59, 130, 246, 0.08));
+      border-left: 3px solid #14b8a6;
+      border-radius: 0 8px 8px 0;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .timeline-impact i {
+      color: #14b8a6;
+      margin-right: 0.3rem;
+    }
+
     .tech-text {
       font-family: 'Inter', monospace;
       padding: 0.1rem 0.35rem;
@@ -1493,13 +1491,13 @@ Professionelle Icon-Styles - keine bunten Farben */
 
     @media (max-width: 960px) {
       .timeline-modern::before {
-        left: 24px;
+        left: 16px;
         transform: none;
       }
 
       .timeline-entry {
         width: 100%;
-        padding: 1.5rem 1.25rem 1.5rem 2.75rem;
+        padding: 1.5rem 1.25rem 1.5rem 3rem;
       }
 
       .timeline-entry.left,
@@ -1509,8 +1507,15 @@ Professionelle Icon-Styles - keine bunten Farben */
 
       .timeline-entry.left::before,
       .timeline-entry.right::before {
-        left: 6px;
+        left: 10px;
         right: auto;
+      }
+
+      .timeline-entry.left::after,
+      .timeline-entry.right::after {
+        left: 22px;
+        right: auto;
+        width: 16px;
       }
     }
     
@@ -1597,11 +1602,29 @@ Professionelle Icon-Styles - keine bunten Farben */
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out;
+      transition: max-height 0.4s ease-out;
     }
     
     .accordion-item.active .accordion-content {
-      max-height: 500px;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .accordion-content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .accordion-content::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .accordion-content::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.3);
+      border-radius: 3px;
+    }
+
+    .accordion-content::-webkit-scrollbar-thumb:hover {
+      background: rgba(59, 130, 246, 0.5);
     }
     
     .accordion-body {
@@ -1621,13 +1644,58 @@ Professionelle Icon-Styles - keine bunten Farben */
     }
     
     .accordion-body li::before {
-      content: '\2713';
+      content: '';
       position: absolute;
       left: 0;
-      color: var(--accent-teal);
-      font-weight: bold;
+      top: 0.7em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14b8a6, #3b82f6);
+      box-shadow: 0 0 6px rgba(20, 184, 166, 0.4);
     }
-    
+
+    .accordion-body h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--accent-teal);
+      margin: 1rem 0 0.5rem;
+    }
+
+    .accordion-body h4:first-child {
+      margin-top: 0;
+    }
+
+    .accordion-body .achieve-context {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.93rem;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .accordion-body .achieve-impact {
+      margin-top: 0.8rem;
+      padding: 0.65rem 1rem;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(59, 130, 246, 0.08));
+      border-left: 3px solid #14b8a6;
+      border-radius: 0 8px 8px 0;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .accordion-body .achieve-impact li {
+      padding: 0.2rem 0 0.2rem 1.5rem;
+    }
+
+    .accordion-body .achieve-impact li::before {
+      top: 0.55em;
+      background: #14b8a6;
+      box-shadow: none;
+    }
+
     /* Achievements Section */
     .achievements {
       padding: 6rem 4rem;
@@ -1636,9 +1704,9 @@ Professionelle Icon-Styles - keine bunten Farben */
     
     .achievements-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1400px;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 900px;
       margin: 0 auto;
     }
     
@@ -1684,20 +1752,95 @@ Professionelle Icon-Styles - keine bunten Farben */
     .skill-category.skill-cloud:hover { border-color: var(--color-cloud); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12); }
     .skill-category.skill-cloud h3 i { color: var(--color-cloud); }
 
-    .skill-category.skill-code:hover { border-color: var(--color-ba); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.12); }
-    .skill-category.skill-code h3 i { color: var(--color-ba); }
+    .skill-category.skill-ai:hover { border-color: var(--color-cloud-light); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.12); }
+    .skill-category.skill-ai h3 i { color: var(--color-cloud-light); }
+
+    .skill-category.skill-re:hover { border-color: var(--color-re); box-shadow: 0 10px 30px rgba(34, 197, 94, 0.12); }
+    .skill-category.skill-re h3 i { color: var(--color-re); }
+
+    .skill-category.skill-gov:hover { border-color: var(--color-ba); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.12); }
+    .skill-category.skill-gov h3 i { color: var(--color-ba); }
+
+    .skill-category.skill-tech:hover { border-color: var(--accent-teal); box-shadow: 0 10px 30px rgba(20, 184, 166, 0.12); }
+    .skill-category.skill-tech h3 i { color: var(--accent-teal); }
 
     .skill-category.skill-auto:hover { border-color: var(--color-auto); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.12); }
     .skill-category.skill-auto h3 i { color: var(--color-auto); }
 
-    .skill-category.skill-pm:hover { border-color: var(--color-re); box-shadow: 0 10px 30px rgba(34, 197, 94, 0.12); }
-    .skill-category.skill-pm h3 i { color: var(--color-re); }
+    /* Skill card tagline */
+    .skill-tagline {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
 
-    .skill-category.skill-ml:hover { border-color: var(--color-cloud-light); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.12); }
-    .skill-category.skill-ml h3 i { color: var(--color-cloud-light); }
+    /* Skill card bullet list */
+    .skill-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem 0;
+    }
 
-    .skill-category.skill-lang:hover { border-color: var(--accent-teal); box-shadow: 0 10px 30px rgba(20, 184, 166, 0.12); }
-    .skill-category.skill-lang h3 i { color: var(--accent-teal); }
+    .skill-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+
+    .skill-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+    }
+
+    .skill-bullets li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Languages footer block */
+    .skills-languages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      padding: 1.25rem 2rem;
+      background: var(--bg-primary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .skills-lang-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-white);
+    }
+
+    .skills-lang-label i {
+      color: var(--accent-teal);
+      margin-right: 0.4rem;
+    }
+
+    .skills-lang-item {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .skills-lang-sep {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.8rem;
+    }
     
     .skill-tags {
       display: flex;
@@ -2113,7 +2256,7 @@ Professionelle Icon-Styles - keine bunten Farben */
 <nav class="navbar">
   <div class="nav-container">
     <a href="#" class="logo">
-        <span class="text-xl font-bold" style="color: hsl(var(--foreground));">Mustafa<span style="color: hsl(var(--primary));">Demir</span></span>
+        <span class="text-xl font-bold" style="color: hsl(var(--foreground));">Mustafa<span style="color: #3b82f6; font-weight: 600;">Demir</span></span>
       </a>
       <ul class="nav-links desktop-nav" style="display: flex; gap: 2.5rem; list-style: none; align-items: center;">
         <li><a href="#home" class="nav-link">Home</a></li>
@@ -2135,20 +2278,19 @@ Professionelle Icon-Styles - keine bunten Farben */
     <div class="hero-container">
       <div class="hero-content">
   <div class="hero-badge" style="color: #00e5ff; border-color: #00e5ff; background: rgba(0, 229, 255, 0.1); font-weight: 600; box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);">
-  <i class="fas fa-circle" style="color: #00e5ff;"></i>
-    Ab sofort einsatzbereit!
+  <i class="fas fa-map-marker-alt" style="color: #00e5ff;"></i>
+    Stuttgart
   </div>
-  <h1>Technical Business Analyst & <span>Cloud Solution</span> Architect</h1>
+  <h1>AI & Cloud Solution Architect<span> mit Business-Verantwortung</span></h1>
   <p class="hero-description" style="text-align: justify; max-width: 520px; line-height: 1.8;">
-    IT-Business Analyst für E-Mobility, Agiler Requirements Engineer und angehender Cloud-Architekt. 
-    Ich verbinde technisches Know-how mit strategischem Denken für innovative Lösungen.
+    Ich übersetze Business-Ziele in produktionsreife Cloud- & KI-Architekturen mit Fokus auf Governance, Skalierung und nachhaltigen Betrieb.
   </p>
   <div class="hero-buttons">
     <a href="#contact" class="btn btn-primary">
-      <i class="fas fa-envelope"></i> Kontakt aufnehmen
+      <i class="fas fa-envelope"></i> Gespräch anfragen
     </a>
     <a href="#experience" class="btn btn-secondary">
-      <i class="fas fa-arrow-right"></i> Mehr erfahren
+      <i class="fas fa-arrow-right"></i> Profil & Erfahrungen
     </a>
   </div>
         
@@ -2156,19 +2298,19 @@ Professionelle Icon-Styles - keine bunten Farben */
         <div class="hero-services">
           <div class="hero-service-card cloud-card">
             <div class="hero-service-icon"><i class="fas fa-cloud"></i></div>
-            <h4>Cloud Architecture</h4>
-            <p>Azure & DevOps</p>
+            <h4>Cloud & AI Architecture</h4>
+            <p>Governance · Skalierung <br>Betrieb</p>
           </div>
-          <div class="hero-service-card auto-card">
-            <div class="hero-service-icon"><i class="fas fa-car"></i></div>
-            <h4>Automotive</h4>
-            <p>E-Mobility & HV</p>
-          </div>
+         <div class="hero-service-card auto-card">
+          <div class="hero-service-icon"><i class="fas fa-car"></i></div>
+             <h4 style="white-space: nowrap; font-size: 0.9rem;">Enterprise & Automotive</h4>
+             <p>E/E-Architektur <br>Plattformen</p>
+         </div>
           <div class="hero-service-card ba-card">
             <div class="hero-service-icon"><i class="fas fa-clipboard-list"></i></div>
-            <h4>Business Analyst</h4>
-            <p>IREB-Zertifizierung</p>
-          </div>
+             <h4 style="white-space: nowrap; font-size: 0.9rem;">Business & Requirements</h4>
+             <p>Entscheidungsgrundlagen Alignment</p>
+            </div>
         </div>
       </div>
       
@@ -2177,27 +2319,23 @@ Professionelle Icon-Styles - keine bunten Farben */
         <div class="hero-image-container">
           <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Digital Cloud Background" class="hero-image-bg">
           <div class="hero-profile-overlay">
-            <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/70623799/5bKILyYt7UdrHYwO.jpeg?Expires=1770384527&Signature=e9-b18n4BSHtNvWiCjLZeE8hYxRUi6~bf2HjeNEK~gkKUAOLkN8LNVUnhHByX7x1VdHM7SoQhlI3CjXn00I8kUNmJJyD9XY7vwaS9QCKqSMxIV6uvHhuJDpFa4kryNy9DozgjtsOg3CoeTydDM75eoqG3xf1zsI~aDVy377aF1~AnoK0ipknq1fx8qdvC5Xj0jdlwpB4~TuYLl1T0sJgO2vI1WjYWhV4-QFpBYSluX85JD8IXJyNDEEVRA78NMyQU6D06Wq5-024lkZsqzNWOMsTbu3MkmMJxN6RTfVEGYr5UQNzN0TYykD8vmDq1gpO61OWff~F20hw~RFsXCE~zA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Mustafa Demir" class="profile-img">
+            <img src="images/Bewerbungsbild.jpg" alt="Mustafa Demir" class="profile-img">
             <span class="profile-name">Mustafa Demir</span>
-            <span class="profile-title">Technical Business Analyst & Cloud Architect</span>
+            <span class="profile-title">AI & Cloud Solution Architect</span>
           </div>
           
-          <!-- Location Badge -->
-          <div class="location-badge">
-            <i class="fas fa-map-marker-alt"></i> Stuttgart
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Expertise Card Stacks -->
-  <section class="expertise" id="services">
+  <section class="expertise" id="expertise">
     <div class="section-container">
       <div class="section-header">
         <div class="section-header-icon"><i class="fas fa-rocket"></i></div>
         <h2>Meine Expertise</h2>
-        <p>Mein IT-Kompetenzprofil verbindet Cloud-Architektur-Spezialisierung mit agiler Requirements Engineering-Erfahrung aus komplexen Technologie-Projekten – von der Automotive-IT zur Enterprise Cloud.</p>
+        <p>Cloud-Architektur & Enterprise-Governance, AI Enablement & KI-Lifecycle-Strukturen, Entscheidungsgrundlagen & Plattformen</p>
       </div>
 
       <div class="expertise-grid" id="expertiseGrid">
@@ -2206,19 +2344,23 @@ Professionelle Icon-Styles - keine bunten Farben */
           <div class="stack-layer layer-2"></div>
           <div class="stack-layer layer-3"></div>
           <div class="stack-head">
-            <div class="stack-icon">🌩️</div>
+            <div class="stack-icon"><i class="fas fa-cloud"></i></div>
             <div>
-              <p class="stack-title">Cloud Architecture</p>
-              <p class="stack-subtitle">Azure-first, Container, Microservices</p>
+              <p class="stack-title">Cloud &amp; AI Architecture</p>
+              <p class="stack-subtitle">Zielbilder · Governance · Produktiver Betrieb</p>
             </div>
           </div>
           <div class="stack-credentials">
-            <span class="stack-pill">Azure Zertifizierung</span>
-            <span class="stack-pill">Velptec Cloud Architect</span>
-            <span class="stack-pill">Microservices</span>
-            <span class="stack-pill">Kubernetes & Docker</span>
+            <span class="stack-pill">Azure Cloud (Enterprise)</span>
+            <span class="stack-pill">Cloud Governance</span>
+            <span class="stack-pill">Container &amp; Plattformen</span>
           </div>
-          <p class="stack-desc">Azure Cloud-Lösungen, Microservices, Container-Orchestrierung und Cloud-native Entwicklung.</p>
+          <ul class="stack-desc">
+            <li>Konzeption skalierbarer Cloud- &amp; KI-Architekturen im Enterprise-Umfeld</li>
+            <li>Übersetzung fachlicher Anforderungen in tragfähige Zielarchitekturen</li>
+            <li>Fokus auf Betrieb, Sicherheit, Kosten und Skalierung</li>
+            <li>Cloud als Plattform, nicht als Tool-Landschaft</li>
+          </ul>
         </div>
 
         <div class="stack-card stack-re" data-stack="re">
@@ -2226,19 +2368,23 @@ Professionelle Icon-Styles - keine bunten Farben */
           <div class="stack-layer layer-2"></div>
           <div class="stack-layer layer-3"></div>
           <div class="stack-head">
-            <div class="stack-icon">📋</div>
+            <div class="stack-icon"><i class="fas fa-clipboard-list"></i></div>
             <div>
-              <p class="stack-title">Requirements Engineering</p>
-              <p class="stack-subtitle">OEM-Erfahrung, IREB, Stakeholder</p>
+              <p class="stack-title">Business &amp; Requirements Engineering</p>
+              <p class="stack-subtitle">Entscheidungsgrundlagen · Alignment · Struktur</p>
             </div>
           </div>
           <div class="stack-credentials">
-            <span class="stack-pill">5+ Jahre OEM</span>
-            <span class="stack-pill">M.Sc. Digital Management</span>
-            <span class="stack-pill">Mercedes & BMW</span>
-            <span class="stack-pill">IREB RE@Agile</span>
+            <span class="stack-pill">Enterprise Stakeholder</span>
+            <span class="stack-pill">Business Alignment</span>
+            <span class="stack-pill">IREB (nachrangig)</span>
           </div>
-          <p class="stack-desc">Systematische Anforderungsanalyse, Stakeholder-Management und Spezifikationserstellung.</p>
+          <ul class="stack-desc">
+            <li>Ableitung von Business-Zielen und Use Cases in strukturierte Anforderungen</li>
+            <li>Übersetzung fachlicher Anforderungen in Architektur- und Lösungsentscheidungen</li>
+            <li>Stakeholder-Alignment in komplexen Enterprise-Strukturen</li>
+            <li>Fokus auf Klarheit, Priorisierung und Umsetzbarkeit</li>
+          </ul>
         </div>
 
         <div class="stack-card stack-auto" data-stack="auto">
@@ -2246,19 +2392,23 @@ Professionelle Icon-Styles - keine bunten Farben */
           <div class="stack-layer layer-2"></div>
           <div class="stack-layer layer-3"></div>
           <div class="stack-head">
-            <div class="stack-icon">🚗</div>
+            <div class="stack-icon"><i class="fas fa-car"></i></div>
             <div>
-              <p class="stack-title">Automotive</p>
-              <p class="stack-subtitle">OEM, Hochvoltbatterie, E/E</p>
+              <p class="stack-title">Enterprise &amp; Automotive Complexity</p>
+              <p class="stack-subtitle">Plattformen · E/E · Produktivbetrieb</p>
             </div>
           </div>
           <div class="stack-credentials">
-            <span class="stack-pill">Mercedes, AMG & BMW</span>
-            <span class="stack-pill">5+ Jahre OEM</span>
-            <span class="stack-pill">MB.OS Digitale Produktentwicklung</span>
-            <span class="stack-pill">E-Mobility Prozesse</span>
+            <span class="stack-pill">Mercedes-Benz · AMG · BMW</span>
+            <span class="stack-pill">E/E &amp; Plattformen</span>
+            <span class="stack-pill">Produktivbetrieb</span>
           </div>
-          <p class="stack-desc">Hochvoltbatterien, E-Mobility, Automotive-Prozesse.</p>
+          <ul class="stack-desc">
+            <li>Erfahrung in hochkomplexen OEM- und Plattformumfeldern</li>
+            <li>Arbeit an E/E-Architekturen, Hochvoltbatterien &amp; digitalen Fahrzeugplattformen</li>
+            <li>Verständnis für regulatorische, organisatorische und technische Abhängigkeiten</li>
+            <li>Brücke zwischen Produkt, IT und Betrieb</li>
+          </ul>
         </div>
 
         <div class="stack-card stack-ba" data-stack="ba">
@@ -2266,19 +2416,24 @@ Professionelle Icon-Styles - keine bunten Farben */
           <div class="stack-layer layer-2"></div>
           <div class="stack-layer layer-3"></div>
           <div class="stack-head">
-            <div class="stack-icon">📊</div>
+            <div class="stack-icon"><i class="fas fa-chart-line"></i></div>
             <div>
-              <p class="stack-title">Business Analysis</p>
-              <p class="stack-subtitle">Prozesse, Digitalisierung, Scrum</p>
+              <p class="stack-title">Business &amp; Transformation</p>
+              <p class="stack-subtitle">Entscheidungen · Prozesse · Governance</p>
             </div>
           </div>
           <div class="stack-credentials">
-            <span class="stack-pill">5+ Jahre OEM</span>
-            <span class="stack-pill">M.Sc. Digital Management</span>
-            <span class="stack-pill">Mercedes, AMG & BMW</span>
+            <span class="stack-pill">Digitale Transformation</span>
+            <span class="stack-pill">Enterprise Governance</span>
+            <span class="stack-pill">Agile Organisationen</span>
             <span class="stack-pill">Scrum Product Owner</span>
           </div>
-          <p class="stack-desc">Prozessoptimierung, Digitalisierung und strategische IT-Beratung.</p>
+          <ul class="stack-desc">
+            <li>Strukturierung von Transformations- und Digitalisierungsinitiativen</li>
+            <li>Analyse von Prozessen, Organisationen und Entscheidungsstrukturen</li>
+            <li>Unterstützung von Management- und Gremienentscheidungen</li>
+            <li>Fokus auf Wirksamkeit statt Methodik</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2290,113 +2445,110 @@ Professionelle Icon-Styles - keine bunten Farben */
     <div class="section-header" style="text-align: center;">
       <div class="section-header-icon"><i class="fas fa-briefcase"></i></div>
       <h2>Berufserfahrung</h2>
-      <p>Mein Werdegang in der Automotive- und IT-Branche</p>
+      <p>Mein Werdegang in Automotive, Plattformen und Cloud- & KI-Architektur</p>
     </div>
     <div class="experience-container">
       <div class="timeline-modern">
+
+        <!-- 1. AI & Cloud Solution Architect -->
         <div class="timeline-entry left">
-          <span class="timeline-date">Okt. 2025 – Heute</span>
-          <h3 class="timeline-role">Karriereübergang | Upskilling Cloud Architect</h3>
+          <span class="timeline-date">Seit August 2025</span>
+          <h3 class="timeline-role">AI & Cloud Solution Architect – Professional Development</h3>
           <div class="timeline-company">Stuttgart</div>
-          <p class="timeline-desc">Neuorientierung in Richtung Cloud & AI, Fokus auf Produktrolle, Architektur und moderne Delivery.</p>
+          <p class="timeline-desc">Gezielte Vertiefungsphase zur Erweiterung meiner bisherigen Enterprise-Erfahrung um Cloud- & KI-Architektur mit Fokus auf produktionsreife Lösungen.</p>
           <ul class="timeline-list">
-            <li>Weiterbildung Cloud Architect (Start 26.01.26), Ziel <span class="tech-text">AZ-305</span></li>
-            <li>Masterarbeit M.Sc. Digital Management & Transformation</li>
-            <li>Fokus: Cloud Architecture, IT-Business Anaylse und Requirements Engineering,</li>
-            <li>Methoden: IREB, <span class="tech-text">Prompt Engineering</span>, Cloud-Konzepte, <span class="tech-text">MLOps</span></li>
+            <li>Architektur von Cloud- & KI-Lösungen mit Fokus auf Governance, Skalierung und Betrieb</li>
+            <li>Masterarbeit zu Referenzarchitekturen für produktiven KI-Einsatz</li>
+            <li>Verbindung von Business-Zielen, Anforderungen und Architekturentscheidungen</li>
           </ul>
-          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-laptop-code"></i><span>Cloud | Business Analyse</span></div>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-cloud"></i><span>Cloud & KI-Architektur</span></div>
         </div>
 
+        <!-- 2. Mercedes-AMG -->
         <div class="timeline-entry right">
           <span class="timeline-date">Dez. 2023 – Juli 2025</span>
           <h3 class="timeline-role">Projektleiter E-Mobility & Agile Prozesse</h3>
           <div class="timeline-company">Mercedes-AMG GmbH</div>
-          <p class="timeline-desc">Einführung agiler Toolchains und Steuerung von E-Mobility-Prozessen.</p>
+          <p class="timeline-desc">Projektarbeit im Umfeld hochkomplexer E-Mobility- und E/E-Systeme.</p>
           <ul class="timeline-list">
-            <li>Jira & Confluence für Task- und Wissensmanagement eingeführt</li>
-            <li>Jira-basiertes Fehlermanagement konzipiert und gerollt</li>
-            <li>Schnittstellen zu Entwicklung, Produktion, Einkauf, Aftersales orchestriert</li>
-            <li>Meilensteine, Budget, Ressourcen im Änderungsmanagement verantwortet</li>
+            <li>Strukturierung agiler Arbeits- und Entscheidungsprozesse</li>
+            <li>Übersetzung technischer & organisatorischer Anforderungen in tragfähige Prozess- und Steuerungsmodelle</li>
+            <li>Schnittstellenverantwortung zwischen Entwicklung, Produktion, Einkauf und Aftersales</li>
+            <li>Verantwortung für Meilensteine, Ressourcen und Abhängigkeiten</li>
           </ul>
+          <div class="timeline-impact"><i class="fas fa-chart-line"></i> <strong>Impact:</strong> Produktivitätssteigerung, bessere Entscheidungsfähigkeit und reduzierte Abhängigkeiten in der Lieferkette.</div>
           <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Affalterbach</span><i class="fas fa-bolt"></i><span>E-Mobility | Agile</span></div>
         </div>
 
+        <!-- 3. Mercedes-Benz MB.OS 2.0 -->
         <div class="timeline-entry left">
           <span class="timeline-date">Sept. 2022 – Dez. 2023</span>
-          <h3 class="timeline-role">Product Strategy / MB.OS 2.0 Digital Products</h3>
+          <h3 class="timeline-role">Produktstrategie & Plattformanforderungen (MB.OS 2.0)</h3>
           <div class="timeline-company">Mercedes-Benz AG</div>
-          <p class="timeline-desc">Produktstrategie für MB.OS 2.0, Fokus auf Requirements, Business Cases und Governance.</p>
+          <p class="timeline-desc">Mitarbeit an der konzernweiten Software- & Plattforminitiative MB.OS 2.0.</p>
           <ul class="timeline-list">
-            <li>Anforderungsmanagement & Produkt-Line-ups mit Marketing/Sales</li>
-            <li>Business-Case-Bewertung mit Controlling</li>
-            <li>Gremien- & Stakeholder-Management, Management-Docs</li>
-            <li>Maturity Management für MB.OS 2.0</li>
+            <li>Übersetzung von Business- und Marktanforderungen in strukturierte Plattform- und Produktanforderungen</li>
+            <li>Mitwirkung an Zielbildern und Entscheidungsgrundlagen</li>
+            <li>Business-Case-Bewertung und Reifegradmanagement</li>
+            <li>Enge Zusammenarbeit mit Management, IT, Architektur und Controlling</li>
           </ul>
-          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Sindelfingen</span><i class="fas fa-diagram-project"></i><span>MB.OS | Product</span></div>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Sindelfingen</span><i class="fas fa-diagram-project"></i><span>MB.OS | Plattform</span></div>
         </div>
 
+        <!-- 4. Magna International -->
         <div class="timeline-entry right">
           <span class="timeline-date">März 2022 – Sept. 2022</span>
-          <h3 class="timeline-role">Spezialist Data- & Prozessmanagement</h3>
+          <h3 class="timeline-role">Data- & Prozessmanagement – Gesamtfahrzeug</h3>
           <div class="timeline-company">Magna International</div>
-          <p class="timeline-desc">Qualität und Effizienz im Gesamtfahrzeug durch Daten- und Prozessoptimierung.</p>
           <ul class="timeline-list">
-            <li>Daten- und Prozessabläufe optimiert, Freigaben begleitet</li>
-            <li>Produktionsprozesse und Qualitätsanforderungen abgesichert</li>
-            <li>Beitrag zu Effizienzsteigerung und reibungsloser Einführung</li>
+            <li>Sicherstellung stabiler Daten- und Freigabeprozesse im Produktivbetrieb</li>
+            <li>Unterstützung von Qualitäts- und Governance-Strukturen</li>
+            <li>Beitrag zur effizienten Produkteinführung</li>
           </ul>
           <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Sindelfingen</span><i class="fas fa-database"></i><span>Data | Prozesse</span></div>
         </div>
 
+        <!-- 5. Praktika (zusammengefasst) -->
         <div class="timeline-entry left">
-          <span class="timeline-date">Jan. 2021 – Juli 2021</span>
-          <h3 class="timeline-role">Praktikum Komplexitäts- & Variantenmanagement</h3>
-          <div class="timeline-company">BMW Group</div>
-          <p class="timeline-desc">Komplexitäts- und Variantenmanagement in der Produktentwicklung.</p>
+          <span class="timeline-date">Praktika (Auswahl)</span>
+          <h3 class="timeline-role">BMW Group & Mercedes-Benz AG</h3>
+          <div class="timeline-company">BMW Group – Komplexitäts- & Variantenmanagement<br>Mercedes-Benz AG – Digitale Transformation & Produktmanagement</div>
           <ul class="timeline-list">
-            <li>Agile Methoden & Tools (u. a. Jira) eingeführt</li>
-            <li>Benchmarking zu Komplexitäts- & Variantenmanagement</li>
-            <li>Variantenbaum-Erstellung und Plausibilitätsprüfung</li>
+            <li>Frühe Mitarbeit an Transformations-, Produkt- und Komplexitätsthemen in der Fahrzeugentwicklung</li>
+            <li>Fokus auf Anforderungen, Stakeholder-Alignment und Entscheidungsstrukturen</li>
           </ul>
-          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>München</span><i class="fas fa-car"></i><span>Variant Mgmt</span></div>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>München & Stuttgart</span><i class="fas fa-car"></i><span>Automotive | Transformation</span></div>
         </div>
 
-        <div class="timeline-entry right">
-          <span class="timeline-date">März 2020 – Sept. 2020</span>
-          <h3 class="timeline-role">Praktikum Digital Transformation & Produktmanagement</h3>
-          <div class="timeline-company">Mercedes-Benz AG</div>
-          <p class="timeline-desc">Unterstützung digitaler Transformationsprojekte mit Fokus auf Requirements & Stakeholder.</p>
-          <ul class="timeline-list">
-            <li>Business-Anforderungen dokumentiert und analysiert</li>
-            <li>Stakeholder-Management und Requirements Engineering</li>
-            <li>Agile Methoden und Produktmanagement-Prozesse unterstützt</li>
-          </ul>
-          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart</span><i class="fas fa-sync"></i><span>Digital | Agile</span></div>
-        </div>
+      </div>
+    </div>
+
+    <!-- Akademischer Hintergrund – klar getrennt -->
+    <div class="section-header" style="text-align: center; margin-top: 4rem;">
+      <div class="section-header-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h2>Akademischer Hintergrund</h2>
+    </div>
+    <div class="experience-container">
+      <div class="timeline-modern">
 
         <div class="timeline-entry left">
-          <span class="timeline-date">Okt. 2023 – Apr. 2026</span>
+          <span class="timeline-date">Laufend</span>
           <h3 class="timeline-role">M.Sc. Digital Management & Transformation</h3>
           <div class="timeline-company">SRH Fernhochschule</div>
-          <p class="timeline-desc">Masterstudium mit Schwerpunkt Data, Cloud und transformative Technologien.</p>
           <ul class="timeline-list">
-            <li>Masterarbeit: Federated Learning & <span class="tech-text">MLOps</span></li>
-            <li>Vertiefung Cloud-Architekturen, Data & AI</li>
+            <li>Fokus: Cloud- & KI-Architektur, Governance, produktiver Betrieb</li>
+            <li>Masterarbeit: Referenzarchitektur für produktiven KI-Einsatz in Cloud-Umgebungen</li>
           </ul>
-          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart & Heildeberg</span><i class="fas fa-graduation-cap"></i><span>Master</span></div>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Fernstudium</span><i class="fas fa-graduation-cap"></i><span>Master</span></div>
         </div>
 
         <div class="timeline-entry right">
-          <span class="timeline-date">2013 – 2018</span>
-          <h3 class="timeline-role">Bachelor of Applied Science</h3>
+          <span class="timeline-date">Abgeschlossen</span>
+          <h3 class="timeline-role">B.Sc. Wirtschaftswissenschaften</h3>
           <div class="timeline-company">Universität Hohenheim</div>
-          <p class="timeline-desc">Schwerpunkt Wirtschaftswissenschaften, analytische Methoden und Management.</p>
-          <ul class="timeline-list">
-            <li>Fokus auf Wirtschaft, Datenanalyse und Prozessdenken</li>
-          </ul>
-          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart/Hohenheim</span><i class="fas fa-university"></i><span>B.Sc.</span></div>
+          <div class="timeline-meta"><i class="fas fa-map-marker-alt"></i><span>Stuttgart/Hohenheim</span><i class="fas fa-university"></i><span>Bachelor</span></div>
         </div>
+
       </div>
     </div>
   </section>
@@ -2407,147 +2559,200 @@ Professionelle Icon-Styles - keine bunten Farben */
       <div class="section-header">
         <div class="section-header-icon"><i class="fas fa-trophy"></i></div>
         <h2>Erfolge & Projekte</h2>
-        <p>Highlights meiner beruflichen Laufbahn</p>
+        <p>Belege für Business-nahe AI- & Cloud-Architektur im Enterprise-Kontext</p>
       </div>
       
       <div class="achievements-grid">
-        <div class="accordion-item achieve-battery">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-battery-full"></i> Hochvoltbatterie-Entwicklung</h3>
-            <i class="fas fa-chevron-down accordion-icon"></i>
-          </div>
-          <div class="accordion-content">
-            <div class="accordion-body">
-              <ul>
-                <li>Erfolgreiche Serienbetreuung der Batteriesysteme</li>
-                <li>Mitarbeit in der Entwicklung neuer Batteriesysteme</li>
-                <li>Entwicklung von neuen IT-basierten Ansätzen für Effizienzsteigerung</li>
-                <li>Projektleiter in der Zusammenarbeit mit Zuliefern und Kooperationspartnern </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion-item achieve-ml">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-brain"></i> Deep Learning Projekt</h3>
-            <i class="fas fa-chevron-down accordion-icon"></i>
-          </div>
-          <div class="accordion-content">
-            <div class="accordion-body">
-              <ul>
-                <li>Optimierung des Anforderungsmanagements mit KI</li>
-                <li>ML-basierte Analyse von Requirements</li>
-                <li>Automatisierte Qualitätsprüfung von Anforderungen</li>
-                <li>Wissenschaftliche Publikation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
+
+        <!-- 1. MB.OS 2.0 -->
         <div class="accordion-item achieve-strategy">
           <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-chart-line"></i> Product Strategy MB.OS 2.0</h3>
+            <h3><i class="fas fa-diagram-project"></i> Product Strategy & Plattformarchitektur – MB.OS 2.0</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Mitarbeit an der konzernweiten Software- und Plattforminitiative MB.OS 2.0 mit Fokus auf Entscheidungsfähigkeit, Governance und skalierbare Produktstrukturen.</p>
+              <h4>Beitrag & Architekturwirkung</h4>
               <ul>
-                <li>Klare Anforderungsbasis durch Abstimmung mit Vertrieb & Marketing</li>
-                <li>Fundierte Business Case Analysen für transparente Entscheidungen</li>
-                <li>Professionelle Gremienarbeit & Entscheidungsfindung</li>
-                <li>Verbesserte Planbarkeit im Produktreifegradprozess</li>
+                <li>Übersetzung von Business- und Marktanforderungen in strukturierte Plattform- und Produktanforderungen</li>
+                <li>Mitwirkung an Zielbildern und Entscheidungsgrundlagen für eine konzernweite Software-Plattform</li>
+                <li>Wirtschaftliche Bewertung von Business Cases zur Management-Entscheidungsunterstützung</li>
+                <li>Steuerung von Reifegrad-, Abhängigkeits- und Governance-Strukturen</li>
+                <li>Enge Zusammenarbeit mit Management, IT, Architektur, Controlling und Fachbereichen</li>
               </ul>
+              <h4>Impact</h4>
+              <div class="achieve-impact">
+                <ul>
+                  <li>Klare, abgestimmte Entscheidungsbasis für die Weiterentwicklung von MB.OS</li>
+                  <li>Verbesserte Planbarkeit und Transparenz in einem hochkomplexen Plattformprogramm</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div class="accordion-item achieve-analytics">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-heartbeat"></i> Predictive Analytics & MLOps</h3>
-            <i class="fas fa-chevron-down accordion-icon"></i>
-          </div>
-          <div class="accordion-content">
-            <div class="accordion-body">
-              <ul>
-                <li>Vorhersage-Instrumentalisierung mit Machine Learning</li>
-                <li>Python-basierte Implementierung (Data Banken)</li>
-                <li>Synthetische Analyseverfahren</li>
-                <li>Cloud-native Architektur</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
+
+        <!-- 2. KI-gestütztes RE -->
         <div class="accordion-item achieve-ki">
           <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-robot"></i> KI-gestütztes Anforderungsmanagement</h3>
+            <h3><i class="fas fa-robot"></i> AI & Cloud Solution Architecture – KI-gestütztes Requirements Engineering</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Konzeption einer KI-gestützten Lösung zur Verbesserung von Qualität, Effizienz und Entscheidungsfähigkeit im Anforderungsmanagement.</p>
+              <h4>Beitrag & Architekturwirkung</h4>
               <ul>
-                <li>Konzeption einer KI-Lösung zur Automatisierung des Anforderungsmanagements</li>
-                <li>Einsatz von BERT-Modellen für Klassifizierung & Duplikaterkennung (F1-Score: 0,90)</li>
-                <li>Entwurf einer Cloud-nativen Architektur mit Human-in-the-Loop-Workflow</li>
-                <li>Prognose: 70% Zeitersparnis und 40% weniger Fehler</li>
+                <li>Ableitung fachlicher Anforderungen in eine Cloud-native KI-Architektur</li>
+                <li>Einsatz von KI zur Klassifikation, Duplikaterkennung und Qualitätsbewertung von Anforderungen</li>
+                <li>Entwurf eines Human-in-the-Loop-Workflows zur Governance-konformen KI-Nutzung</li>
+                <li>Integration in bestehende Enterprise-Prozesse und Tool-Landschaften</li>
               </ul>
+              <h4>Impact</h4>
+              <div class="achieve-impact">
+                <ul>
+                  <li>Prognose: ~70 % Zeitersparnis, ~40 % weniger Fehler</li>
+                  <li>Signifikante Verbesserung der Entscheidungsqualität auf Anforderungsebene</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        
+
+        <!-- 3. KI im SAFe -->
         <div class="accordion-item achieve-safe">
           <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-project-diagram"></i> KI-Integration im SAFe Framework</h3>
+            <h3><i class="fas fa-project-diagram"></i> Enterprise AI Enablement – KI-Integration im SAFe-Framework</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Analyse des Einsatzes von KI zur Unterstützung agiler Rollen und Entscheidungsprozesse im Enterprise-Umfeld (SAFe).</p>
+              <h4>Beitrag & Architekturwirkung</h4>
               <ul>
-                <li>Theoriegeleitete Fallstudie zu 4 SAFe-Rollen & 6 agilen Teams</li>
-                <li>10+ KI-Use-Cases für Automotive E/E-Entwicklung identifiziert</li>
-                <li>Analyse des Rollenwandels durch KI-Automatisierung</li>
-                <li>Handlungsempfehlungen für strategische Transformation</li>
+                <li>Untersuchung des Rollenwandels von Product Ownern und agilen Rollen durch KI-Unterstützung</li>
+                <li>Identifikation von 10+ KI-Use-Cases entlang des agilen Lifecycles</li>
+                <li>Bewertung organisatorischer und technischer Auswirkungen auf Governance und Zusammenarbeit</li>
+                <li>Entwicklung von Handlungsempfehlungen für strategische Transformation</li>
               </ul>
+              <h4>Impact</h4>
+              <div class="achieve-impact">
+                <ul>
+                  <li>Klarer Rahmen für den verantwortungsvollen Einsatz von KI in agilen Organisationen</li>
+                  <li>Beitrag zur strategischen Weiterentwicklung von Produkt- und Entscheidungsstrukturen</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        
+
+        <!-- 4. ESG-Score App -->
         <div class="accordion-item achieve-esg">
           <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-leaf"></i> ESG-Score App (PoS)</h3>
+            <h3><i class="fas fa-leaf"></i> Business-to-Cloud Architektur – ESG-Score App (Proof of Solution)</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Konzeption einer ESG-Anwendung zur Bewertung von Nachhaltigkeitskennzahlen am Point of Sale mit Fokus auf Business-Mehrwert und Skalierbarkeit.</p>
+              <h4>Beitrag & Architekturwirkung</h4>
               <ul>
-                <li>App für Barcode-Scan & ESG-Echtzeit-Scoring am Point of Sale konzipiert</li>
-                <li>Customer Journey Mapping & Value Proposition Design zu Epics/User Stories/MVP</li>
-                <li>Feature-Priorisierung via Conjoint-Logik & Trade-off-Definition</li>
-                <li>Pilotsetup (3 Filialen/6 Monate) mit KPIs & Skalierungsplan</li>
-                <li>DSGVO/Privacy-by-Design & Greenwashing-Prevention</li>
+                <li>Ableitung einer End-to-End-Architektur von Business-Ziel bis Cloud-Betrieb</li>
+                <li>Strukturierung von Customer Journey, Value Proposition und MVP-Scope</li>
+                <li>Definition von Governance-, Datenschutz- und Compliance-Aspekten (DSGVO, Greenwashing-Prevention)</li>
+                <li>Planung eines Pilot- und Skalierungsmodells inkl. KPIs</li>
               </ul>
+              <h4>Impact</h4>
+              <div class="achieve-impact">
+                <ul>
+                  <li>Validiertes Geschäfts- und Architekturkonzept für skalierbare ESG-Anwendungen</li>
+                  <li>Klare Entscheidungsgrundlagen für Produkt- und Investitionsentscheidungen</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div class="accordion-item achieve-dev">
+
+        <!-- 5. Predictive Analytics -->
+        <div class="accordion-item achieve-analytics">
           <div class="accordion-header" onclick="toggleAccordion(this)">
-            <h3><i class="fas fa-laptop-code"></i> KI-gestützte Web-Entwicklung</h3>
+            <h3><i class="fas fa-chart-line"></i> Predictive Analytics & KI-Lifecycle (Cloud)</h3>
             <i class="fas fa-chevron-down accordion-icon"></i>
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Konzeption KI-gestützter Analyse- und Entscheidungssysteme mit Fokus auf Lifecycle-Betrachtung und Betrieb.</p>
+              <h4>Beitrag & Architekturwirkung</h4>
               <ul>
-                <li>Portfolio-Website (über 3500 Zeilen) durch KI-Kollaboration entwickelt</li>
-                <li>Praktische IT-Skills: Prompt Engineering, HTML5, CSS3, JavaScript & KI-Tools (GitHub Copilot, VS Code, Claude, Monica AI)</li>
-                <li>Effizienzsteigerung Faktor 10: 60-80h → 6h konzeptionelle Arbeit</li>
-                <li>Rollenverteilung: 60% Requirements, 30% QA, 90% Coding mit Copilot</li>
-                <li>Wissenschaftlicher Artikel mit 42 Quellen publiziert</li>
+                <li>Architektur von Predictive-Analytics-Lösungen im Cloud-Umfeld</li>
+                <li>Einbettung von KI-Modellen in Betriebs-, Wartungs- und Skalierungsstrukturen</li>
+                <li>Bewertung von Datenqualität, Modellrobustheit und Wartbarkeit</li>
+                <li>Berücksichtigung von MLOps-Prinzipien für produktiven Einsatz</li>
+              </ul>
+              <h4>Impact</h4>
+              <div class="achieve-impact">
+                <ul>
+                  <li>Verbesserte Entscheidungsgrundlagen durch datenbasierte Prognosen</li>
+                  <li>Nachhaltiger KI-Einsatz statt isolierter Prototypen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. E-Mobility -->
+        <div class="accordion-item achieve-battery">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3><i class="fas fa-bolt"></i> E-Mobility Systems & Delivery Governance</h3>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Projektarbeit im Umfeld hochkomplexer E-Mobility- und E/E-Systeme mit Fokus auf Liefer-, Qualitäts- und Entscheidungsstrukturen.</p>
+              <h4>Beitrag & Architekturwirkung</h4>
+              <ul>
+                <li>Steuerung funktionsübergreifender Prozesse zwischen Entwicklung, Produktion, Einkauf und Aftersales</li>
+                <li>Aufbau transparenter Governance- und Eskalationspfade</li>
+                <li>Einführung strukturierter, datenbasierter Steuerungsmodelle</li>
+                <li>Verantwortung für Meilensteine, Abhängigkeiten und Änderungsprozesse</li>
+              </ul>
+              <h4>Impact</h4>
+              <div class="achieve-impact">
+                <ul>
+                  <li>Erhöhte Produktivität und Transparenz</li>
+                  <li>Reduktion von Abhängigkeiten in komplexen Lieferketten</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Forschungsprojekt -->
+        <div class="accordion-item achieve-ml">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3><i class="fas fa-brain"></i> Forschungsprojekt: KI-gestützte Entscheidungsmodelle</h3>
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <h4>Kontext & Ziel</h4>
+              <p class="achieve-context">Wissenschaftliche Auseinandersetzung mit KI-gestützter Entscheidungsunterstützung im Business-Kontext.</p>
+              <h4>Beitrag</h4>
+              <ul>
+                <li>Analyse qualitativer und quantitativer Entscheidungsmodelle</li>
+                <li>Bewertung von Nachvollziehbarkeit, Governance und Business-Relevanz</li>
+                <li>Ableitung praxisnaher Empfehlungen für Enterprise-Einsatz</li>
               </ul>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -2641,79 +2846,140 @@ Professionelle Icon-Styles - keine bunten Farben */
         </div>
 
       <div id="techskills" class="section-header" style="margin-top: 4rem;">
-        <div class="section-header-icon"><i class="fas fa-code"></i></div>
-        <h2>Technische Skills</h2>
-        <p>Meine Kernkompetenzen und Technologien</p>
+        <div class="section-header-icon"><i class="fas fa-layer-group"></i></div>
+        <h2>Kompetenzfelder</h2>
+        <p>Architektur- und Entscheidungsfähigkeit für produktionsreife Cloud- & KI-Lösungen</p>
       </div>
       
       <div class="skills-grid">
+        <!-- Card 1: Cloud & AI Architecture (Primär) -->
         <div class="skill-category skill-cloud">
-          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+          <h3><i class="fas fa-cloud"></i> Cloud & AI Architecture</h3>
+          <p class="skill-tagline">Zielbilder · Governance · Produktiver Betrieb</p>
+          <ul class="skill-bullets">
+            <li>Übersetzung von Business-Zielen in tragfähige Cloud- & KI-Zielarchitekturen</li>
+            <li>Architekturentscheidungen zu Skalierung, Sicherheit, Kosten und Betrieb</li>
+            <li>Cloud als Plattform für AI Enablement statt isolierte Prototypen</li>
+            <li>Erfahrung in Enterprise-Kontexten (Plattformprogramme, komplexe Stakeholder)</li>
+          </ul>
           <div class="skill-tags">
-            <span class="skill-tag">Microsoft Azure</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Terraform</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Cloud Governance</span>
+            <span class="skill-tag">Container Platforms</span>
+            <span class="skill-tag">IaC</span>
+            <span class="skill-tag">Security Basics</span>
+            <span class="skill-tag">Cost Awareness</span>
           </div>
         </div>
-        
-        <div class="skill-category skill-code">
-          <h3><i class="fas fa-code"></i> Programmierung</h3>
+
+        <!-- Card 2: AI Enablement & KI-Lifecycle (Primär) -->
+        <div class="skill-category skill-ai">
+          <h3><i class="fas fa-robot"></i> AI Enablement & KI-Lifecycle</h3>
+          <p class="skill-tagline">MLOps/LLMOps · Qualität · Responsible AI</p>
+          <ul class="skill-bullets">
+            <li>End-to-End Blick: Use Case → Daten/Modelle → Betrieb</li>
+            <li>Governance-konforme KI-Einführung inkl. Human-in-the-Loop</li>
+            <li>Qualitätssicherung: Monitoring, Drift, Tests, Prompt-/Eval-Ansätze</li>
+            <li>Fokus: produktive GenAI-Nutzung statt „Demo-KI"</li>
+          </ul>
+          <div class="skill-tags">
+            <span class="skill-tag">MLOps</span>
+            <span class="skill-tag">LLMOps</span>
+            <span class="skill-tag">Model Monitoring</span>
+            <span class="skill-tag">Evaluation</span>
+            <span class="skill-tag">Responsible AI</span>
+            <span class="skill-tag">Prompt Strategy</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Business & Requirements Engineering (Primär) -->
+        <div class="skill-category skill-re">
+          <h3><i class="fas fa-clipboard-list"></i> Business & Requirements Engineering</h3>
+          <p class="skill-tagline">Entscheidungsgrundlagen · Alignment · Umsetzbarkeit</p>
+          <ul class="skill-bullets">
+            <li>Ableitung von Use Cases und Anforderungen aus Business-Zielen</li>
+            <li>Strukturierung von Anforderungen, Priorisierung & Scope-Klarheit</li>
+            <li>Stakeholder-Alignment in komplexen Organisationen</li>
+            <li>Requirements als Input für Architektur- und Lösungsentscheidungen</li>
+          </ul>
+          <div class="skill-tags">
+            <span class="skill-tag">IREB</span>
+            <span class="skill-tag">Agile Requirements</span>
+            <span class="skill-tag">Stakeholder Mgmt</span>
+            <span class="skill-tag">SAFe Context</span>
+            <span class="skill-tag">Backlog Structuring</span>
+            <span class="skill-tag">Value Focus</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Enterprise Delivery & Governance (Sekundär) -->
+        <div class="skill-category skill-gov">
+          <h3><i class="fas fa-shield-halved"></i> Enterprise Delivery & Governance</h3>
+          <p class="skill-tagline">Komplexität · Abhängigkeiten · Steuerung</p>
+          <ul class="skill-bullets">
+            <li>Steuerung von Abhängigkeiten, Reifegraden & Entscheidungsprozessen</li>
+            <li>Gremien- & Management-Vorbereitung: klare Entscheidungslogik & Dokumentation</li>
+            <li>Delivery-Strukturen in regulierten Umfeldern (Qualität, Compliance, Traceability)</li>
+            <li>Zusammenarbeit zwischen Business, IT, Architektur und Lieferanten</li>
+          </ul>
+          <div class="skill-tags">
+            <span class="skill-tag">Governance</span>
+            <span class="skill-tag">Delivery Models</span>
+            <span class="skill-tag">Risk Awareness</span>
+            <span class="skill-tag">Traceability</span>
+            <span class="skill-tag">Vendor Interfaces</span>
+            <span class="skill-tag">Quality Mindset</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Technischer Hintergrund (Enabler) -->
+        <div class="skill-category skill-tech">
+          <h3><i class="fas fa-terminal"></i> Technischer Hintergrund</h3>
+          <p class="skill-tagline">Verständnis · Schnittstellen · Umsetzbarkeit</p>
+          <ul class="skill-bullets">
+            <li>Fundament für technische Kommunikation & Architektur-Bewertung</li>
+            <li>Datenmodelle, APIs & Schnittstellenverständnis</li>
+            <li>Grundkenntnisse in Automatisierung & CI/CD-Logik</li>
+            <li>Ausreichend Tiefe, um Entscheidungen zu challengen und zu präzisieren</li>
+          </ul>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">SQL</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Bash</span>
-            <span class="skill-tag">YAML</span>
-            <span class="skill-tag">JSON</span>
+            <span class="skill-tag">APIs</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD Basics</span>
+            <span class="skill-tag">Terraform Basics</span>
           </div>
         </div>
-        
-        <div class="skill-category skill-auto">
-          <h3><i class="fas fa-car"></i> Automotive</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">MS-Operation Systems</span>
-            <span class="skill-tag">E/E Architecture</span>
-            <span class="skill-tag">Hochvoltbatterien</span>
-            <span class="skill-tag">E-Mobility</span>
 
-          </div>
-        </div>
-        
-        <div class="skill-category skill-pm">
-          <h3><i class="fas fa-tasks"></i> Projektmanagement</h3>
+        <!-- Card 6: Enterprise & Automotive (Kontext) -->
+        <div class="skill-category skill-auto">
+          <h3><i class="fas fa-car"></i> Enterprise & Automotive</h3>
+          <p class="skill-tagline">Plattformprogramme · E/E · Produktivbetrieb</p>
+          <ul class="skill-bullets">
+            <li>Enterprise-Erfahrung in Automotive-Plattform- und E/E-Kontexten</li>
+            <li>Verständnis für komplexe Systemlandschaften, Qualitäts- & Freigabeprozesse</li>
+            <li>Brücke zwischen Produkt, IT und Betrieb</li>
+          </ul>
           <div class="skill-tags">
-            <span class="skill-tag">Scrum</span>
-            <span class="skill-tag">Kanban</span>
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">Confluence</span>
-            <span class="skill-tag">MS Project</span>
-            <span class="skill-tag">SAFe</span>
+            <span class="skill-tag">OEM Context</span>
+            <span class="skill-tag">E/E</span>
+            <span class="skill-tag">Platform Programs</span>
+            <span class="skill-tag">HV Battery Context</span>
+            <span class="skill-tag">Cross-functional</span>
+            <span class="skill-tag">Operations</span>
           </div>
         </div>
-        
-        <div class="skill-category skill-ml">
-          <h3><i class="fas fa-brain"></i> Data & ML</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">Deep Learning</span>
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">Scikit-learn</span>
-            <span class="skill-tag">TensorFlow</span>
-          </div>
-        </div>
-        
-        <div class="skill-category skill-lang">
-          <h3><i class="fas fa-language"></i> Sprachen</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Deutsch (Muttersprache)</span>
-            <span class="skill-tag">Englisch (Fließend)</span>
-            <span class="skill-tag">Türkisch (Muttersprache)</span>
-          </div>
-        </div>
+      </div>
+
+      <!-- Sprachen – dezenter Footer-Block -->
+      <div class="skills-languages">
+        <span class="skills-lang-label"><i class="fas fa-language"></i> Sprachen:</span>
+        <span class="skills-lang-item">Deutsch (Muttersprache)</span>
+        <span class="skills-lang-sep">·</span>
+        <span class="skills-lang-item">Englisch (fließend)</span>
+        <span class="skills-lang-sep">·</span>
+        <span class="skills-lang-item">Türkisch (Muttersprache)</span>
       </div>
     </div>
   </section>
@@ -2924,9 +3190,6 @@ Professionelle Icon-Styles - keine bunten Farben */
     var stacks = document.querySelectorAll('.stack-card');
     stacks.forEach(function(card, idx) {
       card.style.zIndex = 20 - idx;
-      card.addEventListener('mouseenter', function() {
-        playHoverSound();
-      });
       card.addEventListener('click', function() {
         playBeep();
         stacks.forEach(function(c, i) {
@@ -3049,17 +3312,7 @@ Professionelle Icon-Styles - keine bunten Farben */
       });
     });
 
-    // Mobile Fix - Leeren Platz entfernen
-    const mobileStyle = document.createElement('style');
-    mobileStyle.textContent = `
-      @media (max-width: 768px) {
-        * { margin-bottom: 1rem !important; }
-        .hero-section, .hero { min-height: 40vh !important; padding: 1rem !important; }
-        .expertise-grid, .cards-grid { gap: 1rem !important; margin: 1rem 0 !important; }
-        body { padding: 0.5rem !important; }
-      }
-    `;
-    document.head.appendChild(mobileStyle);
+
   </script>
 </body>
 </html>
